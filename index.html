@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasyPy Desktop | The Pro Visual IDE for Python</title>
+    <title>EasyPy Desktop | Professional Visual IDE for Python</title>
     <!-- Bootstrap 5.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
@@ -64,18 +64,13 @@
         .badge-pro {
             background: linear-gradient(45deg, #f59e0b, #d97706);
             color: white; font-size: 0.7rem; vertical-align: middle;
-        }
-
-        .splitter-demo {
-            border: 1px dashed #444;
-            padding: 10px;
-            display: flex;
-            gap: 5px;
+            padding: 4px 12px; border-radius: 20px; font-weight: bold;
         }
 
         footer { border-top: 1px solid #30363d; padding: 60px 0; }
         
         .btn-primary { background-color: var(--primary-blue); border: none; padding: 12px 30px; font-weight: 600; }
+        .btn-outline-primary { border-color: var(--primary-blue); color: var(--primary-blue); }
         .text-gradient { background: linear-gradient(to right, #58a6ff, #bc8cff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
@@ -87,12 +82,23 @@
             <a class="navbar-brand fw-bold" href="#">
                 <i class="bi bi-terminal-fill me-2 text-primary"></i>EasyPy <span class="text-primary">Desktop</span>
             </a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="#core">Core</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#dev">Developer Tools</a></li>
                     <li class="nav-item"><a class="nav-link" href="#ai">AI Assistant</a></li>
-                    <li class="nav-item"><a class="btn btn-primary ms-lg-4" href="#">Download Beta</a></li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-primary ms-lg-4" href="https://github.com/emo44/easypy-desktop">
+                            <i class="bi bi-github me-2"></i>GitHub
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-lg-2" href="https://github.com/emo44/easypy-desktop/releases/latest/download/EasyPyDesktop.exe">
+                            <i class="bi bi-download me-2"></i>Download
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -101,26 +107,35 @@
     <!-- Hero -->
     <header class="hero-gradient">
         <div class="container text-center">
-            <h1 class="display-2 fw-800 mb-3">The Power of <span class="text-gradient">Python</span>,<br>The Simplicity of Visual Design.</h1>
+            <h1 class="display-2 fw-800 mb-3">The Power of <span class="text-gradient">Python</span>,<br>The Ease of Visual Design.</h1>
             <p class="lead text-secondary mb-5 mx-auto" style="max-width: 750px;">
-                EasyPy Desktop is an all-in-one WYSIWYG environment for creating professional PySide6 applications. 
-                Move fast with visual tools, stay powerful with the full Python ecosystem.
+                Create professional PySide6 desktop applications in minutes. Drag, drop, and automate with our project-aware AI. Built for the modern developer.
             </p>
-            <div class="ide-preview mx-auto mb-5" style="max-width: 900px;">
+            <div class="d-flex justify-content-center gap-3 mb-5">
+                <a href="https://github.com/emo44/easypy-desktop/releases/latest/download/EasyPyDesktop.exe" class="btn btn-primary btn-lg px-5">
+                    Download Free Beta
+                </a>
+                <a href="https://github.com/emo44/easypy-desktop" class="btn btn-outline-light btn-lg px-5">
+                    View Source
+                </a>
+            </div>
+
+            <div class="ide-preview mx-auto mb-5" style="max-width: 950px;">
                 <div class="bg-dark p-2 d-flex align-items-center border-bottom border-secondary">
                     <div class="d-flex gap-2 ms-2">
                         <div class="rounded-circle bg-danger" style="width:10px;height:10px;"></div>
                         <div class="rounded-circle bg-warning" style="width:10px;height:10px;"></div>
                         <div class="rounded-circle bg-success" style="width:10px;height:10px;"></div>
                     </div>
-                    <small class="ms-3 text-secondary">EasyPy Desktop v1.0 - Project: Home.json</small>
+                    <small class="ms-3 text-secondary">EasyPy Desktop v1.0 - Professional Visual Workspace</small>
                 </div>
-                <img src="https://via.placeholder.com/900x450/161b22/58a6ff?text=Professional+WYSIWYG+Canvas+with+Splitters+and+Gizmos" class="img-fluid" alt="IDE Preview">
+                <!-- Note: Replace this placeholder with a real screenshot later -->
+                <img src="https://via.placeholder.com/950x500/161b22/58a6ff?text=EasyPy+IDE:+Magnetic+Grid,+Splitters,+AI+Chat+and+Action+Wizards" class="img-fluid" alt="EasyPy IDE Preview">
                 <div class="terminal-window text-start">
-                    <span class="text-secondary">F5 Debug Console active...</span><br>
-                    > Running MainAppWindow...<br>
-                    > [INFO] Magnetic Grid enabled (10px)<br>
-                    > [SUCCESS] Obfuscated Loader generated.
+                    <span>> Initializing EasyPy Engine...</span><br>
+                    <span>> [OK] Magnetic Snap-to-Grid active (10px)</span><br>
+                    <span>> [OK] AI Assistant connected (Ollama/Gemma 3)</span><br>
+                    <span class="text-info">> Project Loaded: MyProApp.json</span>
                 </div>
             </div>
         </div>
@@ -129,13 +144,17 @@
     <!-- Features Grid -->
     <section id="core" class="py-5">
         <div class="container py-5">
-            <div class="row g-4">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-white">Advanced IDE Features</h2>
+                <p class="text-secondary">Everything you need to build and distribute software.</p>
+            </div>
+            <div class="row g-4 text-start">
                 <!-- Visual Editor -->
                 <div class="col-md-4">
                     <div class="feature-box">
                         <i class="bi bi-grid-3x3-gap icon-gradient"></i>
-                        <h5>Pro WYSIWYG Canvas</h5>
-                        <p class="small text-secondary">Advanced editor featuring <strong>Magnetic Grid snapping</strong>, smart alignment guides, and <strong>Resize Gizmos</strong> for pixel-perfect precision.</p>
+                        <h5>Pro WYSIWYG Editor</h5>
+                        <p class="small text-secondary">Full canvas with <strong>Magnetic Grid snapping</strong>, smart alignment guides, and interactive <strong>Resize Gizmos</strong> for pixel-perfect design.</p>
                     </div>
                 </div>
                 <!-- Dynamic Plugins -->
@@ -143,7 +162,7 @@
                     <div class="feature-box">
                         <i class="bi bi-plugin icon-gradient"></i>
                         <h5>Dynamic Plugin Engine</h5>
-                        <p class="small text-secondary">Extensible architecture. Drop any <code>.py</code> file into the plugins folder to register new widgets, wizards, and custom logic automatically.</p>
+                        <p class="small text-secondary">Instantly extensible. Drop any <code>.py</code> plugin into the folder to add new widgets (SQLite, Serial Port, Multimedia) and Wizards.</p>
                     </div>
                 </div>
                 <!-- Pip Manager -->
@@ -151,91 +170,58 @@
                     <div class="feature-box">
                         <i class="bi bi-box-seam icon-gradient"></i>
                         <h5>Integrated Pip Manager</h5>
-                        <p class="small text-secondary">Manage libraries without leaving the IDE. Search, install, and uninstall Python packages directly from the <strong>Built-in Library Manager</strong>.</p>
-                    </div>
-                </div>
-                <!-- Action Wizards -->
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <i class="bi bi-magic icon-gradient"></i>
-                        <h5>Command Wizards</h5>
-                        <p class="small text-secondary">No-code generation for common tasks. File dialogs, Database queries, and Multimedia controls available through intuitive visual assistants.</p>
-                    </div>
-                </div>
-                <!-- Z-Order -->
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <i class="bi bi-layers icon-gradient"></i>
-                        <h5>Hierarchy & Z-Order</h5>
-                        <p class="small text-secondary">Complete tree view with <strong>Drag & Drop reparenting</strong>. Easily manage complex layers with Raise/Lower controls.</p>
+                        <p class="small text-secondary">Manage libraries without leaving the IDE. Search and install Python packages directly from the built-in <strong>Library Manager</strong>.</p>
                     </div>
                 </div>
                 <!-- Compilation -->
                 <div class="col-md-4">
                     <div class="feature-box">
                         <i class="bi bi-exe icon-gradient"></i>
-                        <h5>One-Click Compilation</h5>
-                        <p class="small text-secondary">Generate standalone EXEs via PyInstaller. Includes <strong>Asset Bundling</strong> and a <strong>Protected Obfuscated Loader</strong> for your code.</p>
+                        <h5>EXE Compilation</h5>
+                        <p class="small text-secondary">One-click standalone <code>.exe</code> generation. Includes asset bundling and a <strong>Protected Obfuscated Loader</strong> for source security.</p>
+                    </div>
+                </div>
+                <!-- UI/UX -->
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="bi bi-ui-checks icon-gradient"></i>
+                        <h5>Professional UI/UX</h5>
+                        <p class="small text-secondary">Modern Dark Mode, <strong>Adjustable Horizontal Splitters</strong>, and a complete Tree Hierarchy with Drag & Drop reparenting.</p>
+                    </div>
+                </div>
+                <!-- Debugging -->
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="bi bi-bug icon-gradient"></i>
+                        <h5>F5 Debug Mode</h5>
+                        <p class="small text-secondary">Real-time testing with an <strong>Integrated Debug Console</strong>. Capture all prints and system logs while you test your application.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- UI/UX Spotlight -->
-    <section id="dev" class="py-5 bg-black">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h2 class="fw-bold text-white mb-4">A Workspace that <span class="text-primary">Flexes</span></h2>
-                    <p class="text-secondary">Designed for productivity with professional UI features:</p>
-                    <ul class="list-unstyled">
-                        <li class="mb-3"><i class="bi bi-arrows-left-right text-primary me-2"></i> <strong>Horizontal Splitters:</strong> Fully adjustable panels for Tools, Canvas, and Properties.</li>
-                        <li class="mb-3"><i class="bi bi-moon-stars text-primary me-2"></i> <strong>Native Dark Mode:</strong> High-contrast interface designed for long coding sessions.</li>
-                        <li class="mb-3"><i class="bi bi-translate text-primary me-2"></i> <strong>Multi-Language:</strong> JSON-based translation system for global application deployment.</li>
-                        <li class="mb-3"><i class="bi bi-bug text-primary me-2"></i> <strong>F5 Debug Mode:</strong> Real-time testing with an integrated Log/Print console.</li>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <div class="feature-box border-primary">
-                        <h6 class="text-uppercase text-primary fw-bold">Live Context Menu</h6>
-                        <p class="small">Right-click anywhere to <strong>Copy, Paste, Duplicate</strong>, or <strong>Bring to Front</strong>. Logic follows the user, making design 3x faster.</p>
-                        <div class="p-3 bg-dark rounded border border-secondary mt-3">
-                             <div class="text-info">Widget: Button_Save</div>
-                             <div class="text-secondary small">Right-click menu:</div>
-                             <div class="ps-3 border-start border-primary mt-2">
-                                <div class="small">⚡ Edit Actions</div>
-                                <div class="small">📄 Copy</div>
-                                <div class="small">🗑️ Delete</div>
-                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI Copilot -->
-    <section id="ai" class="py-5">
+    <!-- AI Copilot Section -->
+    <section id="ai" class="py-5" style="background-color: #090c10;">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5">
-                    <div class="badge badge-pro px-3 py-1 mb-3">AI COPILOT</div>
+                    <span class="badge-pro mb-3">AI ASSISTANT</span>
                     <h2 class="display-5 fw-bold text-white mb-4">Project-Aware Intelligence</h2>
-                    <p class="text-secondary">Our AI doesn't just know Python; it knows <strong>your project</strong>. It scans your widgets, pages, and plugins to provide exact, functional code.</p>
+                    <p class="text-secondary lead">Our AI doesn't just write Python; it understands <strong>your specific project</strong>. It knows your widget IDs, your page names, and your plugins.</p>
                     <div class="mt-4">
                         <div class="d-flex align-items-start mb-3">
-                            <i class="bi bi-cpu text-primary me-3 fs-4"></i>
+                            <i class="bi bi-shield-check text-primary me-3 fs-4"></i>
                             <div>
-                                <h6 class="mb-0 text-white">LLM Agnostic</h6>
-                                <p class="small text-secondary">Connect to OpenAI, LM Studio, or Ollama for 100% local, private AI assistance.</p>
+                                <h6 class="mb-0 text-white">Local & Private</h6>
+                                <p class="small text-secondary">Compatible with OpenAI, LM Studio, and Ollama. Keep your code 100% private using local models.</p>
                             </div>
                         </div>
-                        <div class="d-flex align-items-start mb-3">
-                            <i class="bi bi-clipboard-check text-primary me-3 fs-4"></i>
+                        <div class="d-flex align-items-start">
+                            <i class="bi bi-clipboard-plus text-primary me-3 fs-4"></i>
                             <div>
-                                <h6 class="mb-0 text-white">Smart Copy</h6>
-                                <p class="small text-secondary">Detects Python blocks in chat and copies them with a single click to the clipboard.</p>
+                                <h6 class="mb-0 text-white">One-Click Copy</h6>
+                                <p class="small text-secondary">Instant code extraction. Get your event scripts and paste them directly into the Action Editor.</p>
                             </div>
                         </div>
                     </div>
@@ -245,14 +231,14 @@
                         <div class="p-4 bg-dark">
                             <div class="mb-3">
                                 <span class="text-success fw-bold">You:</span>
-                                <p class="small">How do I save the input from User_Entry into my SQL_Database widget?</p>
+                                <p class="small">How do I add the text from Input_Name to my Listbox_1?</p>
                             </div>
                             <div class="p-3 rounded" style="background: #0d1117; border-left: 4px solid #007acc;">
-                                <span class="text-primary fw-bold">Assistant:</span>
-                                <p class="small">You can use the <code>sqlite_insert</code> command from your SQL plugin:</p>
-                                <pre class="text-warning mb-0"><code>data = find_widget("User_Entry").text()
-db = find_widget("SQL_Database")
-db.sqlite_insert("app.db", "users", ["name"], [data])</code></pre>
+                                <span class="text-primary fw-bold">EasyPy IA:</span>
+                                <p class="small">Use this code for your button action:</p>
+                                <pre class="text-warning mb-0"><code># Get data and add to list
+name = find_widget("Input_Name").text()
+find_widget("Listbox_1").addItem(name)</code></pre>
                             </div>
                         </div>
                     </div>
@@ -264,20 +250,24 @@ db.sqlite_insert("app.db", "users", ["name"], [data])</code></pre>
     <!-- Footer -->
     <footer class="text-center">
         <div class="container">
-            <h4 class="text-white fw-bold mb-4">Ready to build the future of desktop apps?</h4>
-            <div class="d-flex justify-content-center gap-3 mb-5">
-                <a href="#" class="btn btn-primary btn-lg">Free Download</a>
-                <a href="#" class="btn btn-outline-secondary btn-lg">Read Docs</a>
+            <div class="mb-4">
+                <i class="bi bi-terminal-fill fs-1 text-primary"></i>
             </div>
-            <p class="text-secondary small">EasyPy Desktop is created by Emo.</p>
+            <h4 class="text-white fw-bold mb-4">Build Your Next Python Desktop App Today.</h4>
+            <div class="d-flex justify-content-center gap-3 mb-5">
+                <a href="https://github.com/emo44/easypy-desktop/releases/latest/download/EasyPyDesktop.exe" class="btn btn-primary btn-lg">Download Now</a>
+                <a href="https://github.com/emo44/easypy-desktop" class="btn btn-outline-secondary btn-lg">Github Repository</a>
+            </div>
+            <p class="text-secondary small">Created with ❤️ by Emo .</p>
             <div class="fs-4 mt-4">
-                <i class="bi bi-github mx-2"></i>
+                <a href="https://github.com/emo44/easypy-desktop" class="text-secondary mx-2"><i class="bi bi-github"></i></a>
                 <i class="bi bi-discord mx-2"></i>
-                <i class="bi bi-youtube mx-2"></i>
+                <i class="bi bi-twitter-x mx-2"></i>
             </div>
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
