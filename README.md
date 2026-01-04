@@ -1,2 +1,35 @@
-# easypy-desktop
-A professional WYSIWYG visual IDE for Python &amp; PySide6. Design desktop apps with drag-and-drop ease, dynamic plugins, and a project-aware AI Copilot.
+# EasyPy Desktop 🖥️🐍
+**Visual Design meets the power of Python.**
+
+EasyPy Desktop is a professional, all-in-one visual development environment (IDE) that allows you to create modern desktop applications using **Python and PySide6 (Qt)**. Inspired by the simplicity of classic builders like VisualNeo/NeoBook, but powered by the full Python ecosystem.
+
+---
+
+## 🚀 Key Features
+
+*   **Pro WYSIWYG Editor**: Advanced canvas with Magnetic Grid snapping, smart alignment guides, and interactive Resize Gizmos.
+*   **AI Copilot (Context-Aware)**: Built-in AI assistant compatible with OpenAI, Ollama, and LM Studio. It knows your project’s widgets and pages to generate ready-to-use code.
+*   **Dynamic Plugin Engine**: Highly extensible architecture. Drop any `.py` file into the plugins folder to add new tools, widgets, and wizards instantly.
+*   **One-Click Compilation**: Generate standalone `.exe` files with asset bundling and an obfuscated loader to protect your source code.
+*   **Integrated Pip Manager**: Search and install Python libraries directly from the IDE without touching the terminal.
+*   **F5 Debug Mode**: Real-time testing with a dedicated debug console to monitor logs and print statements.
+*   **Flexible UI**: Modern dark-mode interface with adjustable horizontal splitters and a complete hierarchy tree view.
+
+---
+
+## 🛠️ Technical Stack
+
+- **Engine:** Python 3.x
+- **UI Framework:** PySide6 (Qt for Python)
+- **Compilation:** PyInstaller with custom obfuscation
+- **Connectivity:** REST API for AI integration (OpenAI-compatible)
+
+---
+
+## 🌍 Multi-language Support
+EasyPy is built for the world. It includes a JSON-based translation system, making the IDE and the generated apps fully localizable.
+
+---
+
+## 👨‍💻 Created by
+Developed by **Emo** 
