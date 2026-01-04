@@ -1,6 +1,11 @@
 # EasyPy Desktop 🖥️🐍
 **Visual Design meets the power of Python.**
-
+<p align="center">
+  <img src="https://img.shields.io/github/downloads/emo44/easypy-desktop/total?style=flat-square&logo=github" />
+  <img src="https://img.shields.io/github/v/release/emo44/easypy-desktop?style=flat-square&logo=github&color=green" />
+  <img src="https://img.shields.io/github/stars/emo44/easypy-desktop?style=flat-square&logo=github" />
+  <img src="https://img.shields.io/github/languages/top/emo44/easypy-desktop?style=flat-square&logo=python" />
+</p>
 EasyPy Desktop is a professional, all-in-one visual development environment (IDE) that allows you to create modern desktop applications using **Python and PySide6 (Qt)**. Inspired by the simplicity of classic builders like VisualNeo/NeoBook, but powered by the full Python ecosystem.
 
 ---
