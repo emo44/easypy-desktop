@@ -7,9 +7,17 @@
   <img src="https://img.shields.io/github/languages/top/emo44/easypy-desktop?style=flat-square&logo=python" />
 </p>
 EasyPy Desktop is a professional, all-in-one visual development environment (IDE) that allows you to create modern desktop applications using **Python and PySide6 (Qt)**. Inspired by the simplicity of classic builders like VisualNeo/NeoBook, but powered by the full Python ecosystem.
+---
+### ⚠️ IMPORTANT / IMPORTANTE
+
+> [!CAUTION]
+> **ENGLISH:** For the IDE to function correctly (internal paths, runtime, and compilation), the project **MUST** be installed in:  
+> `C:\easypydesktop`
+>
+> **ESPAÑOL:** Para que el IDE funcione correctamente (rutas internas, entorno y compilación), el proyecto **DEBE** instalarse obligatoriamente en:  
+> `C:\easypydesktop`
 
 ---
-
 ## 🚀 Key Features
 
 *   **Pro WYSIWYG Editor**: Advanced canvas with Magnetic Grid snapping, smart alignment guides, and interactive Resize Gizmos.
