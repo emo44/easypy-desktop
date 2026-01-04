@@ -15,8 +15,6 @@ Every plugin must contain three core elements:
     initialize_plugin(): The entry point function.
 
 A. Metadata Example
-code Python
-
     
 PLUGIN_METADATA = {
     'name': {
@@ -46,8 +44,6 @@ Types of parameters supported:
     'hybrid': A tabbed input (Fixed text OR Value from another widget).
 
 Example:
-code Python
-
     
 PLUGIN_SNIPPETS = {
     'db_save': {
@@ -65,7 +61,6 @@ PLUGIN_SNIPPETS = {
 3. The Custom Widget Class
 
 If your plugin adds a new visual component to the Canvas, you must define a class that inherits from a PySide6 widget.
-code Python
 
     
 from PySide6.QtWidgets import QPushButton
@@ -84,7 +79,6 @@ class MyPluginWidget(QPushButton):
 4. Initialization
 
 The initialize_plugin(mw) function is called by the IDE. Here you register your widget in the Toolbox.
-code Python
 
     
 def initialize_plugin(mw):
@@ -109,7 +103,6 @@ def initialize_plugin(mw):
 6. Accessing Plugins via Script
 
 In the EasyPy Action Editor, users will access your plugin using:
-code Python
 
     
 # Accessing by ID
