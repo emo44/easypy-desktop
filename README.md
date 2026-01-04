@@ -8,6 +8,7 @@
 </p>
 EasyPy Desktop is a professional, all-in-one visual development environment (IDE) that allows you to create modern desktop applications using **Python and PySide6 (Qt)**. Inspired by the simplicity of classic builders like VisualNeo/NeoBook, but powered by the full Python ecosystem.
 ---
+
 ⚠️ IMPORTANT / IMPORTANTE
 
 > [!CAUTION]
