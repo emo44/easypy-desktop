@@ -9,17 +9,17 @@
 
 **Design, Build, and Compile Python Desktop Apps to EXE.**
 
-EasyPy Desktop is a professional, all-in-one visual development environment (IDE) for **Python and PySide6 (Qt)**. It combines the simplicity of drag-and-drop design with the ability to generate standalone executables for Windows.
+EasyPy Desktop is all-in-one visual development environment (IDE) for **Python and PySide6 (Qt)**. It combines the simplicity of drag-and-drop design with the ability to generate standalone executables for Windows.
 
 ---
 ## 🚀 Key Features
 
 *   **Pro WYSIWYG Editor**: Advanced canvas with Magnetic Grid snapping, smart alignment guides, and interactive Resize Gizmos.
-*   **AI Copilot (Context-Aware)**: Built-in AI assistant compatible with OpenAI, Ollama, and LM Studio. It knows your project’s widgets and pages to generate ready-to-use code.
+*   **Context-Aware AI Assistant**: Built-in AI assistant compatible with OpenAI, Ollama, and LM Studio. It knows your project’s widgets and pages to generate ready-to-use code.
 *   **Dynamic Plugin Engine**: Highly extensible architecture. Drop any `.py` file into the plugins folder to add new tools, widgets, and wizards instantly.
-*   **One-Click Compilation**: Generate standalone `.exe` files with asset bundling and an obfuscated loader to protect your source code.
+*   **One-Click Compilation**: Generate standalone `.exe` files with asset bundling. Features a **smart dependency scanner** to minimize the final executable's size.
 *   **Integrated Pip Manager**: Search and install Python libraries directly from the IDE without touching the terminal.
-*   **F5 Debug Mode**: Real-time testing with a dedicated debug console to monitor logs and print statements.
+*   **F5 Test & Debug Mode**: Real-time testing with a dedicated debug console to monitor logs and print statements.
 *   **Flexible UI**: Modern dark-mode interface with adjustable horizontal splitters and a complete hierarchy tree view.
 
 ---
@@ -28,7 +28,7 @@ EasyPy Desktop is a professional, all-in-one visual development environment (IDE
 
 - **Engine:** Python 3.x
 - **UI Framework:** PySide6 (Qt for Python)
-- **Compilation:** PyInstaller with custom obfuscation
+- **Compilation:** PyInstaller with a smart dependency scanner and dynamic build process.
 - **Connectivity:** REST API for AI integration (OpenAI-compatible)
 
 ---
