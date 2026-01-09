@@ -11,16 +11,6 @@
 
 EasyPy Desktop is a professional, all-in-one visual development environment (IDE) for **Python and PySide6 (Qt)**. It combines the simplicity of drag-and-drop design with the ability to generate standalone executables for Windows.
 
-<hr>
-⚠️ IMPORTANT / IMPORTANTE
-
-> [!CAUTION]
-> **ENGLISH:** For the IDE to function correctly (internal paths, runtime, and compilation), the project **MUST** be installed in:  
-> `C:\easypydesktop`
->
-> **ESPAÑOL:** Para que el IDE funcione correctamente (rutas internas, entorno y compilación), el proyecto **DEBE** instalarse obligatoriamente en:  
-> `C:\easypydesktop`
-
 ---
 ## 🚀 Key Features
 
