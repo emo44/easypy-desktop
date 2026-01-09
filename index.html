@@ -62,10 +62,9 @@
             
             <div class="d-flex justify-content-center gap-3 mb-5">
                 <a href="https://github.com/emo44/easypy-desktop/releases/latest/download/Install_EasyPyDesktop.exe" class="btn btn-primary btn-lg px-5">
-                    Download v1.0 Beta
+                    Download v1.1 (Beta)
                 </a>
-                <!-- BOTÓN CORREGIDO: Ahora apunta a la Licencia -->
-                <a href="https://github.com/emo44/easypy-desktop/blob/main/LICENSE.txt" class="btn btn-outline-light btn-lg px-5">
+                <a href="https://github.com/emo44/easypy-desktop/blob/main/LICENSE.txt" target="_blank" class="btn btn-outline-light btn-lg px-5">
                     View License (EULA)
                 </a>
             </div>
@@ -79,12 +78,12 @@
                     </div>
                     <small class="ms-3 text-secondary">EasyPy Desktop IDE - Workspace Preview</small>
                 </div>
-                <!-- Imagen real screenshot.png -->
                 <img src="screenshot.png" class="img-fluid" alt="EasyPy Desktop IDE Interface">
                 <div class="terminal-window text-start">
                     <span>> EasyPy Engine initialized.</span><br>
                     <span>> [OK] Magnetic Snap-to-Grid active (10px)</span><br>
-                    <span>> [OK] AI Copilot ready (Gemma 3 / OpenAI)</span><br>
+                    <!-- CAMBIO: Reemplazado "AI Copilot" por "AI Assistant" para evitar problemas de marca. -->
+                    <span>> [OK] AI Assistant ready (Local & API support)</span><br>
                     <span class="text-info">> Project Status: Ready for Compilation</span>
                 </div>
             </div>
@@ -122,9 +121,10 @@
                 </div>
                 <div class="col-md-4">
                     <div class="feature-box">
-                        <i class="bi bi-exe icon-gradient"></i>
+                        <i class="bi bi-file-earmark-zip icon-gradient"></i>
+                        <!-- CAMBIO: Texto ajustado para ser más descriptivo y menos propenso a conflictos. -->
                         <h5>One-Click EXE</h5>
-                        <p class="small text-secondary">Generate standalone executables including all assets. Features a <strong>Protected Obfuscated Loader</strong> for your code.</p>
+                        <p class="small text-secondary">Generate a standalone executable including assets. Features a smart dependency scanner to minimize final file size.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -145,7 +145,8 @@
         </div>
     </section>
 
-    <!-- AI Copilot -->
+    <!-- CAMBIO: Reemplazado el comentario para consistencia. -->
+    <!-- AI Assistant -->
     <section id="ai" class="py-5" style="background-color: #090c10;">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
@@ -198,15 +199,14 @@
             <h4 class="text-white fw-bold mb-4">Build and distribute your Python apps now.</h4>
             <div class="d-flex justify-content-center gap-3 mb-5">
                 <a href="https://github.com/emo44/easypy-desktop/releases/latest/download/Install_EasyPyDesktop.exe" class="btn btn-primary btn-lg">Download Installer</a>
-                <!-- BOTÓN CORREGIDO: Ahora apunta a la Licencia -->
-                <a href="https://github.com/emo44/easypy-desktop/blob/main/LICENSE.txt" class="btn btn-outline-secondary btn-lg">View License (EULA)</a>
+                <a href="https://github.com/emo44/easypy-desktop/blob/main/LICENSE.txt" target="_blank" class="btn btn-outline-secondary btn-lg">View License (EULA)</a>
             </div>
             <p class="text-secondary small">Created with ❤️ by Emo.</p>
             <p class="text-secondary" style="font-size: 0.75rem;">EasyPy Desktop is proprietary software. All rights reserved.</p>
             <div class="fs-4 mt-4 text-secondary">
-                <i class="bi bi-github mx-2"></i>
-                <i class="bi bi-discord mx-2"></i>
-                <i class="bi bi-twitter-x mx-2"></i>
+                <a href="https://github.com/emo44/easypy-desktop" target="_blank" class="text-secondary mx-2">
+                    <i class="bi bi-github"></i>
+                </a>
             </div>
         </div>
     </footer>
