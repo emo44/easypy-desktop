@@ -20,7 +20,7 @@ EasyPy Desktop is all-in-one visual development environment (IDE) for **Python a
 *   **One-Click Compilation**: Generate standalone `.exe` files with asset bundling. Features a **smart dependency scanner** to minimize the final executable's size.
 *   **Integrated Pip Manager**: Search and install Python libraries directly from the IDE without touching the terminal.
 *   **F5 Test & Debug Mode**: Real-time testing with a dedicated debug console to monitor logs and print statements.
-*   **Flexible UI**: Modern dark-mode interface with adjustable horizontal splitters and a complete hierarchy tree view.
+*   **Flexible UI**: Modern Light/dark-mode interface with adjustable horizontal splitters and a complete hierarchy tree view.
 
 ---
 
