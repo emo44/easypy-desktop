@@ -1,0 +1,150 @@
+==============================================================================
+THIRD-PARTY SOFTWARE NOTICES AND LICENSES
+==============================================================================
+
+This software "EasyPy Desktop" includes software components from third-party
+sources. The licenses and notices for these components are provided below.
+
+------------------------------------------------------------------------------
+1. MINIFORGE / CONDA-FORGE
+------------------------------------------------------------------------------
+This software bundles a runtime environment based on Miniforge.
+
+Miniforge installer code uses BSD-3-Clause license as stated below.
+
+Binary packages that come with it have their own licensing terms
+and by installing miniforge you agree to the licensing terms of individual
+packages as well. They include different OSI-approved licenses including
+the GNU General Public License and can be found in pkgs/<pkg-name>/info/licenses
+folders.
+
+Miniforge installer comes with a bootstrapping executable that is used
+when installing miniforge and is deleted after miniforge is installed.
+The bootstrapping executable uses micromamba, cli11, cpp-filesystem,
+curl, c-ares, krb5, libarchive, libev, lz4, nghttp2, openssl, libsolv,
+nlohmann-json, reproc and zstd which are licensed under BSD-3-Clause,
+MIT and OpenSSL licenses. Licenses and copyright notices of these
+projects can be found at the following URL:
+https://github.com/conda-forge/micromamba-feedstock/tree/master/recipe.
+
+Copyright (c) 2019-2022, conda-forge
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+------------------------------------------------------------------------------
+2. PYTHON
+------------------------------------------------------------------------------
+This software includes the Python programming language.
+Copyright (c) 2001-2023 Python Software Foundation. All Rights Reserved.
+
+PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2
+
+1. This LICENSE AGREEMENT is between the Python Software Foundation ("PSF"), and
+   the Individual or Organization ("Licensee") accessing and otherwise using this
+   software ("Python") in source or binary form and its associated documentation.
+
+2. Subject to the terms and conditions of this License Agreement, PSF hereby
+   grants Licensee a nonexclusive, royalty-free, world-wide license to reproduce,
+   analyze, test, perform and/or display publicly, prepare derivative works,
+   distribute, and otherwise use Python alone or in any derivative version,
+   provided, however, that PSF's License Agreement and PSF's notice of copyright,
+   i.e., "Copyright (c) 2001-2023 Python Software Foundation; All Rights
+   Reserved" are retained in Python alone or in any derivative version prepared
+   by Licensee.
+
+3. In the event Licensee prepares a derivative work that is based on or
+   incorporates Python or any part thereof, and wants to make the derivative
+   work available to others as provided herein, then Licensee hereby agrees to
+   include in any such work a brief summary of the changes made to Python.
+
+4. PSF is making Python available to Licensee on an "AS IS" basis. PSF MAKES NO
+   REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED. BY WAY OF EXAMPLE, BUT NOT
+   LIMITATION, PSF MAKES NO AND DISCLAIMS ANY REPRESENTATION OR WARRANTY OF
+   MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF
+   PYTHON WILL NOT INFRINGE ANY THIRD PARTY RIGHTS.
+
+5. PSF SHALL NOT BE LIABLE TO LICENSEE OR ANY OTHER USERS OF PYTHON FOR ANY
+   INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES OR LOSS AS A RESULT OF
+   MODIFYING, DISTRIBUTING, OR OTHERWISE USING PYTHON, OR ANY DERIVATIVE
+   THEREOF, EVEN IF ADVISED OF THE POSSIBILITY THEREOF.
+
+------------------------------------------------------------------------------
+3. Qt for Python (PySide6)
+------------------------------------------------------------------------------
+This software uses the Qt Toolkit and the PySide6 bindings under the terms of
+the GNU Lesser General Public License (LGPL) Version 3.
+
+Qt is a registered trademark of The Qt Company Ltd.
+PySide6 is Copyright (C) 2023 The Qt Company Ltd.
+
+This application is dynamically linked against the Qt libraries. Users are
+permitted to replace the Qt dynamic libraries with their own modified versions
+in accordance with the LGPL v3.
+
+You may obtain a copy of the GNU Lesser General Public License at:
+https://www.gnu.org/licenses/lgpl-3.0.html
+
+Source code for Qt and PySide6 can be obtained from:
+https://www.qt.io/download
+
+------------------------------------------------------------------------------
+4. OPENSSL
+------------------------------------------------------------------------------
+This product includes software developed by the OpenSSL Project for use in the
+OpenSSL Toolkit. (http://www.openssl.org/)
+
+Copyright (c) 1998-2023 The OpenSSL Project. All rights reserved.
+Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com). All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+3. All advertising materials mentioning features or use of this software
+   must display the following acknowledgment:
+   "This product includes software developed by the OpenSSL Project for use
+   in the OpenSSL Toolkit. (http://www.openssl.org/)"
+
+THIS SOFTWARE IS PROVIDED BY THE OpenSSL PROJECT ``AS IS'' AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+EVENT SHALL THE OpenSSL PROJECT OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES.
+
+------------------------------------------------------------------------------
+5. OTHER LIBRARIES
+------------------------------------------------------------------------------
+This software may include other Python libraries (e.g., Requests, Cryptography)
+which are distributed under permissive licenses such as Apache 2.0, BSD, or MIT.
+Full license texts can be found in the installed environment's info folders.
+
+Apache License Version 2.0 (Requests, Cryptography):
+http://www.apache.org/licenses/LICENSE-2.0
