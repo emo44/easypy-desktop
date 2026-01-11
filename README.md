@@ -12,6 +12,8 @@
 EasyPy Desktop is all-in-one visual development environment (IDE) for **Python and PySide6 (Qt)**. It combines the simplicity of drag-and-drop design with the ability to generate standalone executables for Windows.
 
 ---
+<img width="1457" height="846" alt="screenshot" src="https://github.com/user-attachments/assets/92c61607-963f-459f-a06b-60726fe2558a" />
+
 ## 🚀 Key Features
 
 *   **Pro WYSIWYG Editor**: Advanced canvas with Magnetic Grid snapping, smart alignment guides, and interactive Resize Gizmos.
