@@ -63,6 +63,8 @@ Crucial Function: find_widget("ID")
 In your generated string, always use find_widget("ID") to reference other objects in the app.
 
 Generator Structure:
+code Python
+
     
 def my_generator_func(params):
     # 'params' is a dictionary containing the user inputs from the Wizard.
@@ -81,6 +83,7 @@ def my_generator_func(params):
 [SECTION D] Snippets (The Wizard UI)
 
 A dictionary named PLUGIN_SNIPPETS. This defines the pop-up windows when a user double-clicks your widget.
+code Python
 
     
 PLUGIN_SNIPPETS = {
@@ -118,6 +121,7 @@ Available Input Types (type):
 [SECTION E] The Visual Widget
 
 A class inheriting from a PySide6 Widget (usually QPushButton, QLabel, or QFrame). This is what appears on the Editor Canvas.
+code Python
 
     
 class MyVisualButton(QPushButton):
@@ -131,6 +135,8 @@ class MyVisualButton(QPushButton):
 [SECTION F] Initialization
 
 The entry point called by EasyPyDesktop to load your plugin.
+code Python
+
     
 def initialize_plugin(mw):
     # mw: Reference to the MainWindow
@@ -190,6 +196,7 @@ def initialize_plugin(mw):
 Example 2: Intermediate - Web Opener
 
 Opens a URL in the browser.
+code Python
 
     
 import webbrowser
