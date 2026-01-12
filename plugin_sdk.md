@@ -1,40 +1,39 @@
-EasyPyDesktop Plugin SDK - Official Guide
-
-Welcome to the EasyPyDesktop Plugin Development Kit.
-This guide explains how to create extensions (.py files) to add new widgets and functionality to the editor.
-
-    📂 LOCATION:
-    All plugins must be placed inside the plugins folder of your EasyPyDesktop installation.
-
-1. Anatomy of a Plugin
-
-A valid plugin is a single Python file (.py) containing 5 specific sections:
-
-    IMPORTS: Standard Python libraries and PySide6 widgets.
-
-    METADATA: Information about the author and description.
-
-    GENERATORS: Functions that generate the Python code string.
-
-    SNIPPETS: Configuration for the Wizard dialogs (inputs).
-
-    WIDGET CLASS: The visual element displayed on the canvas.
-
-    INITIALIZATION: Registration function.
-
-2. Section by Section Guide
-[SECTION A] Imports
-
-You must import PySide6 widgets for the visual part.
-code Python
-
     
+# 📘 EasyPyDesktop Plugin SDK - Official Guide
+
+Welcome to the **EasyPyDesktop Plugin Development Kit**.
+This guide explains how to create extensions (`.py` files) to add new widgets and functionality to the editor.
+
+> **📂 LOCATION:**
+> All plugins must be placed inside the `plugins` folder of your EasyPyDesktop installation.
+
+---
+
+## 🏗️ 1. Anatomy of a Plugin
+
+A valid plugin is a single Python file (`.py`) containing **5 specific sections**:
+
+1.  **🔌 IMPORTS:** Standard Python libraries and PySide6 widgets.
+2.  **📝 METADATA:** Information about the author and description.
+3.  **⚙️ GENERATORS:** Functions that generate the Python code string.
+4.  **✨ SNIPPETS:** Configuration for the Wizard dialogs (inputs).
+5.  **🎨 WIDGET CLASS:** The visual element displayed on the canvas.
+6.  **🚀 INITIALIZATION:** Registration function.
+
+---
+
+## 📖 2. Section by Section Guide
+
+### 📦 [SECTION A] Imports
+You must import PySide6 widgets for the visual part.
+
+```python
 from PySide6.QtWidgets import QPushButton, QLabel, QMessageBox
 from PySide6.QtCore import Qt
 
   
 
-[SECTION B] Metadata
+🌍 [SECTION B] Metadata
 
 A dictionary named PLUGIN_METADATA. It supports multiple languages (en, es, de, ru, zh).
 code Python
@@ -55,18 +54,18 @@ PLUGIN_METADATA = {
 
   
 
-[SECTION C] Generators (The Logic)
+🧠 [SECTION C] Generators (The Logic)
 
 Concept: You are NOT writing code that runs immediately. You are writing a Python function that returns a STRING. That string is the code that will be saved in the final EXE.
 
-Crucial Function: find_widget("ID")
+🔑 Crucial Function: find_widget("ID")
 In your generated string, always use find_widget("ID") to reference other objects in the app.
 
 Generator Structure:
 code Python
 
     
-def my_generator_func(params):
+def gen_my_logic(params):
     # 'params' is a dictionary containing the user inputs from the Wizard.
     target_id = params.get('target_widget', '')
     
@@ -80,7 +79,7 @@ def my_generator_func(params):
 
   
 
-[SECTION D] Snippets (The Wizard UI)
+🪄 [SECTION D] Snippets (The Wizard UI)
 
 A dictionary named PLUGIN_SNIPPETS. This defines the pop-up windows when a user double-clicks your widget.
 code Python
@@ -98,27 +97,21 @@ PLUGIN_SNIPPETS = {
                 "default": "value"
             }
         ],
-        "generator": my_generator_func # Links to the function in Section C
+        "generator": gen_my_logic # Links to the function in Section C
     }
 }
 
   
 
-Available Input Types (type):
-
-    text: Simple text input field. Returns a string.
-
-    bool: A Checkbox. Returns True or False.
-
-    widget_combo: A dropdown list containing IDs of all widgets in the project. Returns a string (Widget ID).
-
-    code_block: Large text area for Python code.
-
-    hybrid: A tabbed input allowing the user to choose between Fixed Text or Reading from another Widget.
-
-    dynamic_list: A list where users can add multiple rows (useful for databases or mapping).
-
-[SECTION E] The Visual Widget
+🎛️ Available Input Types (type):
+Type	Description	Returns
+text	Simple text input field.	String
+bool	A Checkbox.	True / False
+widget_combo	Dropdown list containing IDs of all widgets.	String (Widget ID)
+code_block	Large text area for Python code.	String (Multi-line)
+hybrid	Tabbed input: Fixed Text vs Read from Widget.	Dict
+dynamic_list	Adds multiple rows (Key/Value). Useful for DBs.	List of Dicts
+🎨 [SECTION E] The Visual Widget
 
 A class inheriting from a PySide6 Widget (usually QPushButton, QLabel, or QFrame). This is what appears on the Editor Canvas.
 code Python
@@ -132,7 +125,7 @@ class MyVisualButton(QPushButton):
 
   
 
-[SECTION F] Initialization
+🏁 [SECTION F] Initialization
 
 The entry point called by EasyPyDesktop to load your plugin.
 code Python
@@ -140,12 +133,12 @@ code Python
     
 def initialize_plugin(mw):
     # mw: Reference to the MainWindow
-    # register_plugin_tool(Unique_ID, WidgetClass, DefaultWidth, DefaultHeight)
+    # register_plugin_tool(Unique_ID, WidgetClass, Width, Height)
     mw.register_plugin_tool('my_tool_id', MyVisualButton, 120, 40)
 
   
 
-3. Complete Examples
+🎓 3. Complete Examples
 Example 1: Beginner - "Hello World" Button
 
 Save this as hello_plugin.py
@@ -239,12 +232,12 @@ def initialize_plugin(mw):
 
   
 
-4. Tips for Developers
+💡 4. Tips for Developers
 
-    Safe Interactions: Use find_widget("ID") in your generators to interact with other inputs, labels, or elements in the scene.
+    🛡️ Safe Interactions: Use find_widget("ID") in your generators to interact with other inputs, labels, or elements in the scene.
 
-    Safe Imports: If your plugin requires external libraries (like pandas or requests), import them INSIDE the generator string (f''' ... '''), not at the top of your plugin file. This prevents the editor from crashing if the user doesn't have them installed.
+    📦 Safe Imports: If your plugin requires external libraries (like pandas or requests), import them INSIDE the generator string (f''' ... '''), not at the top of your plugin file. This prevents the editor from crashing if the user doesn't have them installed.
 
-    Mandatory Init: The initialize_plugin function is mandatory. Without it, the plugin will be ignored.
+    ⚠️ Mandatory Init: The initialize_plugin function is mandatory. Without it, the plugin will be ignored.
 
-    Styling: You can use CSS in setStyleSheet to make your widget look unique in the editor.
+    💅 Styling: You can use CSS in setStyleSheet to make your widget look unique in the editor.
