@@ -36,7 +36,7 @@ EasyPy Desktop is all-in-one visual development environment (IDE) for **Python a
 ---
 
 ## 🌍 Multi-language Support
-EasyPy is built for the world. It includes a JSON-based translation system, making the IDE and the generated apps fully localizable.
+EasyPy is built for the world. It includes a JSON-based translation system, making the IDE fully localizable.
 
 ---
 
