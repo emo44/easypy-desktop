@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/github/downloads/emo44/easypy-desktop/total?style=flat-square&logo=github&label=Downloads%20(Total)" />
   
   <!-- OPCIONAL: Si quieres mostrar SOLO las descargas de la Beta específica (cambia 'v1.0-beta' por tu tag real) -->
-  <!-- <img src="https://img.shields.io/github/downloads/emo44/easypy-desktop/1.0-beta/total?style=flat-square&logo=github&label=Beta%20Downloads" /> -->
+  <!-- <img src="https://img.shields.io/github/downloads/emo44/easypy-desktop/1.0-beta.1/total?style=flat-square&logo=github&label=Beta%20Downloads" /> -->
 
   <!-- 2. Versión (Corregido para mostrar Pre-releases) -->
   <img src="https://img.shields.io/github/v/release/emo44/easypy-desktop?include_prereleases&style=flat-square&logo=github&label=Latest%20Ver" />
