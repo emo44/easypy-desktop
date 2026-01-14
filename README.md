@@ -1,12 +1,21 @@
 # EasyPy Desktop 🖥️🐍
 **Visual Design meets the power of Python.**
 <p align="center">
-  <img src="https://img.shields.io/github/downloads/emo44/easypy-desktop/total?style=flat-square&logo=github" />
-  <img src="https://img.shields.io/github/v/release/emo44/easypy-desktop?style=flat-square&logo=github&color=green" />
+  <!-- 1. Descargas TOTALES (Incluye Pre-releases) -->
+  <img src="https://img.shields.io/github/downloads/emo44/easypy-desktop/total?style=flat-square&logo=github&label=Downloads%20(Total)" />
+  
+  <!-- OPCIONAL: Si quieres mostrar SOLO las descargas de la Beta específica (cambia 'v1.0-beta' por tu tag real) -->
+  <!-- <img src="https://img.shields.io/github/downloads/emo44/easypy-desktop/v1.0-beta/total?style=flat-square&logo=github&label=Beta%20Downloads" /> -->
+
+  <!-- 2. Versión (Corregido para mostrar Pre-releases) -->
+  <img src="https://img.shields.io/github/v/release/emo44/easypy-desktop?include_prereleases&style=flat-square&logo=github&label=Latest%20Ver" />
+
+  <!-- 3. Estrellas -->
   <img src="https://img.shields.io/github/stars/emo44/easypy-desktop?style=flat-square&logo=github" />
+
+  <!-- 4. Lenguaje -->
   <img src="https://img.shields.io/github/languages/top/emo44/easypy-desktop?style=flat-square&logo=python" />
 </p>
-
 **Design, Build, and Compile Python Desktop Apps to EXE.**
 
 EasyPy Desktop is all-in-one visual development environment (IDE) for **Python and PySide6 (Qt)**. It combines the simplicity of drag-and-drop design with the ability to generate standalone executables for Windows.
