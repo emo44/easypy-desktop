@@ -1,19 +1,16 @@
 # EasyPy Desktop 🖥️🐍
 **Visual Design meets the power of Python.**
 <p align="center">
-  <!-- 1. Descargas TOTALES (Incluye Pre-releases) -->
-  <img src="https://img.shields.io/github/downloads/emo44/easypy-desktop/total?style=flat-square&logo=github&label=Downloads%20(Total)" />
+ 
+  <img src="https://img.shields.io/github/downloads/emo44/easypy-desktop/total?style=flat-square&logo=github&label=Total%20Downloads&color=blue" />
   
-  <!-- OPCIONAL: Si quieres mostrar SOLO las descargas de la Beta específica (cambia 'v1.0-beta' por tu tag real) -->
-  <!-- <img src="https://img.shields.io/github/downloads/emo44/easypy-desktop/1.0-beta.1/total?style=flat-square&logo=github&label=Beta%20Downloads" /> -->
 
-  <!-- 2. Versión (Corregido para mostrar Pre-releases) -->
- <img src="https://img.shields.io/github/v/release/emo44/easypy-desktop?include_prereleases&sort=semver&style=flat-square&logo=github&label=Latest%20Ver&color=orange" />
+  <img src="https://img.shields.io/github/downloads/emo44/easypy-desktop/1.0-beta.1/total?style=flat-square&logo=github&label=Beta%20Downloads&color=yellow" />
 
-  <!-- 3. Estrellas -->
-  <img src="https://img.shields.io/github/stars/emo44/easypy-desktop?style=flat-square&logo=github" />
 
-  <!-- 4. Lenguaje -->
+  <img src="https://img.shields.io/github/v/release/emo44/easypy-desktop?include_prereleases&sort=semver&style=flat-square&logo=github&label=Latest%20Ver&color=orange" />
+
+ 
   <img src="https://img.shields.io/badge/Language-Python-3776AB?style=flat-square&logo=python&logoColor=white" />
 </p>
 **Design, Build, and Compile Python Desktop Apps to EXE.**
