@@ -8,7 +8,7 @@
   <!-- <img src="https://img.shields.io/github/downloads/emo44/easypy-desktop/1.0-beta.1/total?style=flat-square&logo=github&label=Beta%20Downloads" /> -->
 
   <!-- 2. Versión (Corregido para mostrar Pre-releases) -->
-  <img src="https://img.shields.io/github/v/release/emo44/easypy-desktop?include_prereleases&style=flat-square&logo=github&label=Latest%20Ver" />
+ <img src="https://img.shields.io/github/v/release/emo44/easypy-desktop?include_prereleases&sort=semver&style=flat-square&logo=github&label=Latest%20Ver&color=orange" />
 
   <!-- 3. Estrellas -->
   <img src="https://img.shields.io/github/stars/emo44/easypy-desktop?style=flat-square&logo=github" />
