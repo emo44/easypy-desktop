@@ -14,7 +14,7 @@
   <img src="https://img.shields.io/github/stars/emo44/easypy-desktop?style=flat-square&logo=github" />
 
   <!-- 4. Lenguaje -->
-  <img src="https://img.shields.io/github/languages/top/emo44/easypy-desktop?style=flat-square&logo=python" />
+  <img src="https://img.shields.io/badge/Language-Python-3776AB?style=flat-square&logo=python&logoColor=white" />
 </p>
 **Design, Build, and Compile Python Desktop Apps to EXE.**
 
