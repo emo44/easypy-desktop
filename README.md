@@ -3,52 +3,98 @@
 
 <p align="center">
   <img src="https://img.shields.io/github/downloads/emo44/easypy-desktop/total?style=flat-square&logo=github&label=Total%20Downloads&color=blue" />
-  <img src="https://img.shields.io/github/v/release/emo44/easypy-desktop?include_prereleases&sort=semver&style=flat-square&logo=github&label=Current%20Beta&color=yellow" />
+  <img src="https://img.shields.io/github/v/release/emo44/easypy-desktop?include_prereleases&sort=semver&style=flat-square&logo=github&label=Current%20Release&color=yellow" />
   <img src="https://img.shields.io/badge/Status-Active_Development-green?style=flat-square&logo=github" />
   <img src="https://img.shields.io/badge/Language-Python-3776AB?style=flat-square&logo=python&logoColor=white" />
 </p>
 
-**Design, Build, and Compile Python Desktop Apps to EXE.**
+**Design, build, and compile Python desktop applications visually.**
 
-EasyPy Desktop is an all-in-one visual development environment (IDE) for **Python and PySide6 (Qt)**. It combines the simplicity of drag-and-drop design with the ability to generate standalone executables for Windows.
-
----
-
-<img width="1395" height="825" alt="Captura de pantalla 2026-01-17 212514" src="https://github.com/user-attachments/assets/81224d60-b772-41ad-85ac-7c618d99de41" />
-
-## 🔥 Coming Soon in Beta 2 (In Development)
-
-We are working hard on the next big update (**v1.1**). Here is a sneak peek of the features already implemented in the dev branch:
-
-*   **🧠 Free AI Assistant:** Integration with **Pollinations.ai**. Chat and generate code for **FREE** without needing an API Key (Universal OpenAI compatibility included).
-*   **✨ Intelligent Autocomplete (IntelliSense):** The script editor will suggest Python keywords, internal API functions, and **your own Widget IDs** as you type.
-*   **🎨 Magic Transparency Tool:** Built-in **Chroma Key** with an Eyedropper (💉). Remove image backgrounds directly in the editor properties.
-*   **📂 User Plugins System:** A dedicated `plugins_user/` folder to keep your custom extensions safe during updates, plus a new "My Plugins" tab.
-*   **🔄 Auto-Updater:** The app will automatically check GitHub for new releases and changelogs.
-* and a lot of new features...
-*(Stay tuned! This version is currently in testing phase).*
+EasyPy Desktop is an **all-in-one visual development environment (IDE)** for **Python and PySide6 (Qt)**.  
+It combines the simplicity of **drag-and-drop UI design** with the power of Python scripting and the ability to generate **standalone Windows executables**.
 
 ---
 
-## 🚀 Key Features (Available Now)
+<img width="1395" height="825" alt="EasyPy Desktop Screenshot" src="https://github.com/user-attachments/assets/81224d60-b772-41ad-85ac-7c618d99de41" />
 
-*   **Pro WYSIWYG Editor**: Advanced canvas with Magnetic Grid snapping, smart alignment guides, and interactive Resize Gizmos.
-*   **Context-Aware AI Brain**: Built-in AI assistant compatible with OpenAI, Ollama, and LM Studio. It knows your project’s widgets and pages.
-*   **Dynamic Plugin Engine**: Highly extensible architecture. Drop any `.py` file into the plugins folder to add new tools instantly.
-*   **One-Click Compilation**: Generate standalone `.exe` files with asset bundling. Features a **smart dependency scanner** to minimize file size.
-*   **Integrated Pip Manager**: Search and install Python libraries directly from the IDE without touching the terminal.
-*   **F5 Test & Debug Mode**: Real-time testing with a dedicated debug console to monitor logs.
+---
+
+## 🚀 What is EasyPy Desktop?
+
+EasyPy Desktop is designed for developers who want to:
+
+- Build **desktop applications visually**
+- Extend functionality using **pure Python**
+- Create **native-looking UIs** with PySide6
+- Package projects into **standalone `.exe` files**
+- Experiment rapidly with **plugins, widgets, and AI-assisted workflows**
+
+The project is currently in **active development** and released as **public beta versions**.
+
+---
+
+## ✨ Key Features
+
+- **Pro WYSIWYG Editor**  
+  Advanced canvas with magnetic grid snapping, alignment guides, and interactive resize handles.
+
+- **Context-Aware AI Assistant**  
+  Integrated AI system compatible with OpenAI-compatible APIs, local models, and third-party providers.  
+  The assistant understands your project structure, widgets, and pages.
+
+- **Dynamic Plugin Engine**  
+  Highly extensible architecture. Add new tools and features by dropping Python files into the plugins system.
+
+- **Native Widgets & Tools**  
+  Growing collection of native widgets, editors, and utilities designed specifically for EasyPy Desktop.
+
+- **One-Click Compilation**  
+  Generate standalone Windows executables with automatic asset bundling and smart dependency analysis.
+
+- **Integrated Package Manager**  
+  Install and manage Python libraries directly from the IDE without using the terminal.
+
+- **Live Test & Debug Mode**  
+  Run and test your project instantly with a dedicated debug console.
+
+---
+
+## 🧪 Release Status
+
+EasyPy Desktop is distributed as **beta / pre-release builds**.
+
+- Features may change or evolve
+- Some functionality may be experimental
+- Bugs or incomplete behavior may exist
+
+Please refer to the **GitHub Releases** section for detailed changelogs of each version.
 
 ---
 
 ## 🛠️ Technical Stack
 
-- **Engine:** Python 3.x
-- **UI Framework:** PySide6 (Qt for Python)
-- **Compilation:** PyInstaller (Smart Analysis & Dynamic Spec)
-- **Connectivity:** REST API for AI integration
+- **Core Language:** Python 3.x  
+- **UI Framework:** PySide6 (Qt for Python)  
+- **Packaging:** PyInstaller (with smart dependency analysis)  
+- **Extensibility:** Plugin-based architecture  
+- **AI Integration:** REST-based APIs
+
+---
 
 ## 🌍 Multi-language Support
-EasyPy is built for the world. It includes a JSON-based translation system, making the IDE fully localizable.
+
+EasyPy Desktop includes a **JSON-based translation system**, allowing the IDE to be fully localized and adapted to different languages.
+
+---
+
+## 🐞 Feedback & Issues
+
+If you encounter bugs or have feature requests, please open an **Issue** in this repository.  
+Community feedback is essential for shaping future versions.
+
+---
+
 ## 👨‍💻 Created by
-Developed by **Emo** 
+
+Developed by **Emo**  
+A solo developer exploring new ideas in visual Python desktop development.
