@@ -43,7 +43,8 @@
                     <li class="nav-item"><a class="nav-link" href="#core">Features</a></li>
                     <li class="nav-item"><a class="nav-link" href="#ai">AI Assistant</a></li>
                     <li class="nav-item">
-                        <a class="btn btn-primary ms-lg-4" href="https://github.com/emo44/easypy-desktop/releases/latest/download/Install_EasyPyDesktop.exe">
+                        <!-- Added js-download-latest class -->
+                        <a class="btn btn-primary ms-lg-4 js-download-latest" href="https://github.com/emo44/easypy-desktop/releases/latest">
                             <i class="bi bi-download me-2"></i>Download Installer
                         </a>
                     </li>
@@ -61,8 +62,9 @@
             </p>
             
             <div class="d-flex justify-content-center gap-3 mb-5">
-                <a href="https://github.com/emo44/easypy-desktop/releases/latest/download/Install_EasyPyDesktop.exe" class="btn btn-primary btn-lg px-5">
-                    Download v1.0 (Beta)
+                <!-- Added js-download-latest class -->
+                <a href="https://github.com/emo44/easypy-desktop/releases/latest" class="btn btn-primary btn-lg px-5 js-download-latest">
+                    Download Latest Release
                 </a>
                 <a href="https://github.com/emo44/easypy-desktop/blob/main/LICENSE.txt" target="_blank" class="btn btn-outline-light btn-lg px-5">
                     View License (EULA)
@@ -78,11 +80,11 @@
                     </div>
                     <small class="ms-3 text-secondary">EasyPy Desktop IDE - Workspace Preview</small>
                 </div>
+                <!-- Ensure screenshot.png exists in your folder -->
                 <img src="screenshot.png" class="img-fluid" alt="EasyPy Desktop IDE Interface">
                 <div class="terminal-window text-start">
                     <span>> EasyPy Engine initialized.</span><br>
                     <span>> [OK] Magnetic Snap-to-Grid active (10px)</span><br>
-                    <!-- CAMBIO: Reemplazado "AI Copilot" por "AI Assistant" para evitar problemas de marca. -->
                     <span>> [OK] AI Assistant ready (Local & API support)</span><br>
                     <span class="text-info">> Project Status: Ready for Compilation</span>
                 </div>
@@ -122,7 +124,6 @@
                 <div class="col-md-4">
                     <div class="feature-box">
                         <i class="bi bi-file-earmark-zip icon-gradient"></i>
-                        <!-- CAMBIO: Texto ajustado para ser más descriptivo y menos propenso a conflictos. -->
                         <h5>One-Click EXE</h5>
                         <p class="small text-secondary">Generate a standalone executable including assets. Features a smart dependency scanner to minimize final file size.</p>
                     </div>
@@ -145,7 +146,6 @@
         </div>
     </section>
 
-    <!-- CAMBIO: Reemplazado el comentario para consistencia. -->
     <!-- AI Assistant -->
     <section id="ai" class="py-5" style="background-color: #090c10;">
         <div class="container py-5">
@@ -198,7 +198,8 @@
             </div>
             <h4 class="text-white fw-bold mb-4">Build and distribute your Python apps now.</h4>
             <div class="d-flex justify-content-center gap-3 mb-5">
-                <a href="https://github.com/emo44/easypy-desktop/releases/latest/download/Install_EasyPyDesktop.exe" class="btn btn-primary btn-lg">Download Installer</a>
+                <!-- Added js-download-latest class -->
+                <a href="https://github.com/emo44/easypy-desktop/releases/latest" class="btn btn-primary btn-lg js-download-latest">Download Installer</a>
                 <a href="https://github.com/emo44/easypy-desktop/blob/main/LICENSE.txt" target="_blank" class="btn btn-outline-secondary btn-lg">View License (EULA)</a>
             </div>
             <p class="text-secondary small">Created with ❤️ by Emo.</p>
@@ -212,5 +213,39 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Dynamic Download Link Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const repo = "emo44/easypy-desktop";
+            // Select all buttons with this class
+            const downloadButtons = document.querySelectorAll('.js-download-latest');
+
+            if(downloadButtons.length > 0) {
+                fetch(`https://api.github.com/repos/${repo}/releases/latest`)
+                    .then(response => {
+                        if (!response.ok) throw new Error("Network response was not ok");
+                        return response.json();
+                    })
+                    .then(data => {
+                        // Look for an asset ending in .exe (Installer)
+                        const installerAsset = data.assets.find(asset => asset.name.toLowerCase().endsWith('.exe'));
+                        
+                        if (installerAsset) {
+                            // Update all download buttons with the direct download URL
+                            downloadButtons.forEach(btn => {
+                                btn.href = installerAsset.browser_download_url;
+                                // Optional: Update tooltip or title to show version
+                                btn.title = `Download ${data.tag_name}`;
+                            });
+                            console.log(`Download links updated to version: ${data.tag_name}`);
+                        }
+                    })
+                    .catch(error => {
+                        console.log("Could not fetch latest release, using default link.", error);
+                    });
+            }
+        });
+    </script>
 </body>
 </html>
