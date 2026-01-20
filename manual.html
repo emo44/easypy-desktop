@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyPy Desktop - The Complete Manual</title>
+    <style>
+        :root {
+            /* Palette Professional */
+            --primary: #0078d4;       /* Windows Blue */
+            --primary-dark: #005a9e;
+            --accent: #b4009e;        /* Deep Purple for Logic */
+            --success: #107c10;       /* Green for Code */
+            --warning: #ffb900;
+            --danger: #d13438;
+            
+            --bg-sidebar: #f0f0f0;
+            --bg-content: #ffffff;
+            --text-main: #323130;
+            --text-light: #605e5c;
+            
+            --border: #e1dfdd;
+            
+            /* Code Editor Look */
+            --code-bg: #1e1e1e;
+            --code-fg: #d4d4d4;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-sidebar: #252526;
+                --bg-content: #1e1e1e;
+                --text-main: #ffffff;
+                --text-light: #cccccc;
+                --border: #3e3e42;
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', Helvetica, Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            color: var(--text-main);
+            background-color: var(--bg-content);
+            overflow: hidden;
+        }
+
+        /* --- SIDEBAR --- */
+        #sidebar {
+            width: 320px;
+            background-color: var(--bg-sidebar);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+
+        .brand {
+            padding: 20px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #search-container {
+            padding: 15px;
+        }
+
+        #search-input {
+            width: 100%;
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+            background: var(--bg-content);
+            color: var(--text-main);
+            box-sizing: border-box;
+        }
+
+        #toc {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding-bottom: 20px;
+        }
+
+        /* TOC Styling */
+        .toc-cat {
+            padding: 15px 20px 5px 20px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-top: 10px;
+        }
+
+        .toc-link {
+            display: block;
+            padding: 6px 20px 6px 30px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 0.9rem;
+            border-left: 3px solid transparent;
+            transition: 0.1s;
+        }
+
+        .toc-link:hover {
+            background-color: rgba(0,0,0,0.05);
+        }
+
+        .toc-link.active {
+            border-left-color: var(--primary);
+            background-color: rgba(0, 120, 212, 0.1);
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* --- CONTENT --- */
+        #content {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 0 80px 100px 80px;
+            scroll-behavior: smooth;
+        }
+
+        /* Typography */
+        h1 { font-size: 2.5rem; margin-top: 40px; color: var(--primary); border-bottom: 1px solid var(--border); padding-bottom: 15px; }
+        h2 { font-size: 1.8rem; margin-top: 50px; color: var(--text-main); border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+        h3 { font-size: 1.4rem; margin-top: 35px; color: var(--primary-dark); }
+        h4 { font-size: 1.1rem; margin-top: 25px; font-weight: 700; }
+        p, li { line-height: 1.6; font-size: 1rem; color: var(--text-main); }
+        
+        /* Code Blocks */
+        pre {
+            background: var(--code-bg);
+            color: var(--code-fg);
+            padding: 20px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.9rem;
+            border: 1px solid #333;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        code {
+            font-family: 'Consolas', monospace;
+            background: rgba(0,0,0,0.1);
+            padding: 2px 5px;
+            border-radius: 4px;
+            color: var(--accent);
+        }
+        
+        pre code { background: transparent; color: inherit; padding: 0; }
+
+        /* Syntax Highlighting (Simulated) */
+        .kw { color: #569cd6; font-weight: bold; } /* Keyword */
+        .str { color: #ce9178; } /* String */
+        .com { color: #6a9955; font-style: italic; } /* Comment */
+        .func { color: #dcdcaa; } /* Function */
+        .num { color: #b5cea8; } /* Number */
+
+        /* Callouts */
+        .alert {
+            padding: 15px 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+            border-left: 5px solid;
+            display: flex;
+            gap: 15px;
+            align-items: start;
+        }
+        
+        .alert-info { background: rgba(0, 120, 212, 0.1); border-color: var(--primary); }
+        .alert-warn { background: rgba(255, 185, 0, 0.1); border-color: var(--warning); }
+        .alert-danger { background: rgba(209, 52, 56, 0.1); border-color: var(--danger); }
+        
+        .icon { font-size: 1.5rem; line-height: 1; }
+
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+        th, td { border: 1px solid var(--border); padding: 12px; text-align: left; }
+        th { background-color: rgba(0,0,0,0.05); font-weight: 600; }
+
+        /* Keyboard Key Style */
+        kbd {
+            background-color: #eee;
+            border-radius: 3px;
+            border: 1px solid #b4b4b4;
+            box-shadow: 0 1px 1px rgba(0,0,0,.2), 0 2px 0 0 rgba(255,255,255,.7) inset;
+            color: #333;
+            display: inline-block;
+            font-size: .85em;
+            font-weight: 700;
+            line-height: 1;
+            padding: 2px 4px;
+            white-space: nowrap;
+        }
+
+        /* Scroll to top */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: 0.3s;
+        }
+        #back-to-top:hover { opacity: 1; }
+
+    </style>
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <div id="sidebar">
+        <div class="brand">📘 EasyPy Desktop Docs</div>
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Filter topics...">
+        </div>
+        <div id="toc">
+            <!-- Dynamic TOC generated below is structured for clarity -->
+            
+            <div class="toc-cat">1. Essentials</div>
+            <a href="#intro" class="toc-link active">Introduction</a>
+            <a href="#installation" class="toc-link">Installation & Setup</a>
+            <a href="#interface" class="toc-link">Interface Tour</a>
+            
+            <div class="toc-cat">2. Designing (Visual)</div>
+            <a href="#widgets" class="toc-link">Widgets Reference</a>
+            <a href="#layout" class="toc-link">Layouts & Anchors</a>
+            <a href="#styling" class="toc-link">CSS Styling & Themes</a>
+            <a href="#assets" class="toc-link">Assets Manager</a>
+
+            <div class="toc-cat">3. Logic (No-Code)</div>
+            <a href="#action-editor" class="toc-link">Action Editor</a>
+            <a href="#wizards" class="toc-link">Using Wizards</a>
+            
+            <div class="toc-cat">4. Scripting (Python)</div>
+            <a href="#scripting-intro" class="toc-link">How Scripts Work</a>
+            <a href="#internal-api" class="toc-link">Internal API (Self, Ctx)</a>
+            <a href="#variables" class="toc-link">State Management (ctx)</a>
+            <a href="#debugging" class="toc-link">Debugging Console</a>
+
+            <!-- NEW SECTION -->
+            <div class="toc-cat">5. Code Patterns</div>
+            <a href="#functions-subs" class="toc-link">Functions & Subroutines</a>
+            
+            <div class="toc-cat">6. Advanced Topics</div>
+            <a href="#sqlite" class="toc-link">Databases (SQLite)</a>
+            <a href="#http" class="toc-link">HTTP Requests & APIs</a>
+            <a href="#file-system" class="toc-link">File System & Paths</a>
+            
+            <div class="toc-cat">7. Extensibility</div>
+            <a href="#plugin-sdk" class="toc-link">Plugin SDK (Create Widgets)</a>
+            <a href="#ai-integration" class="toc-link">AI Configuration</a>
+
+            <div class="toc-cat">8. Distribution</div>
+            <a href="#compiling" class="toc-link">Building .EXE</a>
+            <a href="#licensing" class="toc-link">Pro Features</a>
+            
+            <div class="toc-cat">9. Appendices</div>
+            <a href="#shortcuts" class="toc-link">Keyboard Shortcuts</a>
+            <a href="#troubleshooting" class="toc-link">Troubleshooting</a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="content">
+        
+        <!-- SECTION 1 -->
+        <h1 id="intro">1. Introduction</h1>
+        <p><strong>EasyPy Desktop</strong> is a professional Rapid Application Development (RAD) environment. It allows you to build native Windows applications using the power of <strong>Python 3</strong> and the <strong>PySide6 (Qt)</strong> framework, but with a visual drag-and-drop interface.</p>
+        
+        <p><strong>Key Philosophy:</strong> "Visual for Design, Python for Logic". Unlike blocks-based tools, here you write real Python code, giving you unlimited power.</p>
+
+        <h2 id="installation">Installation & Setup</h2>
+        <p>EasyPy Desktop is portable. To ensure it runs correctly:</p>
+        <div class="alert alert-info">
+            <span class="icon">ℹ️</span>
+            <div>
+                <strong>The "runtime" Folder:</strong><br>
+                You must keep the <code>runtime</code> folder in the same directory as the <code>EasyPyDesktop.exe</code>. This folder contains the embedded Python interpreter and libraries (Pandas, Requests, PySide6, etc.) used to run your projects and compile EXEs.
+            </div>
+        </div>
+
+        <h2 id="interface">Interface Tour</h2>
+        <ul>
+            <li><strong>Toolbar:</strong> Access to file operations, undo/redo, and build tools.
+                <ul>
+                    <li><span class="icon">🧹</span> <strong>Broom Icon:</strong> Resets the style of selected widgets (removes CSS).</li>
+                    <li><span class="icon">▶️</span> <strong>Play (F5):</strong> Runs the project instantly for testing.</li>
+                    <li><span class="icon">🖥️</span> <strong>Computer (F9):</strong> Compiles the project to a standalone .EXE.</li>
+                </ul>
+            </li>
+            <li><strong>Left Panel (Tabs):</strong>
+                <ul>
+                    <li><strong>Create:</strong> Manage Pages (windows) and Standard Widgets.</li>
+                    <li><strong>Hierarchy:</strong> Tree view of all objects. Use drag-and-drop here to reparent widgets (e.g., move a button inside a Container).</li>
+                    <li><strong>Assets:</strong> File manager for images, sounds, and videos.</li>
+                    <li><strong>AI:</strong> Chat with the assistant to generate code.</li>
+                </ul>
+            </li>
+            <li><strong>Canvas:</strong> The visual workspace. Supports grid snapping and multi-selection.</li>
+            <li><strong>Right Panel:</strong>
+                <ul>
+                    <li><strong>Properties:</strong> Change ID, Text, Geometry, and Colors.</li>
+                    <li><strong>Minimap:</strong> Navigate large forms easily.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- SECTION 2 -->
+        <h1 id="widgets">2. Visual Design</h1>
+        
+        <h3>Standard Widgets</h3>
+        <table>
+            <tr><th>Widget</th><th>Description</th></tr>
+            <tr><td><strong>Label</strong></td><td>Display text or images. Can be rotated, flipped, or transparent.</td></tr>
+            <tr><td><strong>Button</strong></td><td>Triggers actions when clicked.</td></tr>
+            <tr><td><strong>Input</strong></td><td>Single-line text entry (QLineEdit).</td></tr>
+            <tr><td><strong>TextArea</strong></td><td>Multi-line text editor. Supports "Read Only" mode.</td></tr>
+            <tr><td><strong>Container</strong></td><td>Groups widgets. <strong>Critical:</strong> Enable "Scrollable" property to create scrollable areas.</td></tr>
+            <tr><td><strong>WebView</strong></td><td>Embeds a Chromium browser. Great for maps, PDFs, or HTML reports.</td></tr>
+            <tr><td><strong>Media Player</strong></td><td>Plays MP3/MP4. Supports "Autoplay" and looping.</td></tr>
+        </table>
+
+        <h2 id="layout">Layouts & Anchors (Responsive Design)</h2>
+        <p>Creating apps that look good on different screen sizes is handled via the <strong>Anchor</strong> property in the Right Panel.</p>
+        
+        <div class="alert alert-warn">
+            <span class="icon">⚠️</span>
+            <div><strong>Tip:</strong> Anchors only work when the window is resized. In the editor, you see the fixed size.</div>
+        </div>
+
+        <ul>
+            <li><strong>Top-Left (Default):</strong> Stays fixed to the top-left corner.</li>
+            <li><strong>Top-Right:</strong> Moves with the right edge. Good for "Close" buttons.</li>
+            <li><strong>Stretch-Width:</strong> The widget grows horizontally as the window widens. Good for Title Bars or Text Inputs.</li>
+            <li><strong>Stretch-Both:</strong> The widget grows in all directions. Ideal for background images, maps, or main text areas.</li>
+        </ul>
+
+        <h2 id="styling">CSS Styling</h2>
+        <p>EasyPy uses <strong>QSS (Qt Style Sheets)</strong>, which is very similar to CSS. You can customize widgets deeply in the "Widget Specific" section of properties.</p>
+        
+        <h4>Common Properties:</h4>
+        <pre><code class="css">background-color: #ff0000;  /* Hex Color */
+color: white;               /* Text Color */
+border-radius: 10px;        /* Rounded Corners */
+border: 2px solid blue;     /* Borders */
+padding: 5px;               /* Inner spacing */</code></pre>
+
+        <h2 id="assets">Assets Manager</h2>
+        <p>To include images or videos:</p>
+        <ol>
+            <li>Save your project first.</li>
+            <li>Go to the <strong>Assets</strong> tab.</li>
+            <li>Click "Open Folder" and paste your files there, or click Refresh.</li>
+            <li><strong>Drag and Drop</strong> a file from the list to the Canvas. It will automatically create the correct widget (Image for JPG/PNG, Media Player for MP3/MP4).</li>
+        </ol>
+        
+        <div class="alert alert-info">
+            <span class="icon">ℹ️</span>
+            <div><strong>Relative Paths:</strong> EasyPy automatically converts dropped assets to relative paths (e.g., <code>assets/logo.png</code>). This ensures they work when you compile the EXE.</div>
+        </div>
+
+        <!-- SECTION 3 -->
+        <h1 id="action-editor">3. Logic & Actions</h1>
+        <p>Double-click any widget to open the <strong>Action Editor</strong>.</p>
+        
+        <ul>
+            <li><strong>Left Side:</strong> Code Editor. Supports syntax highlighting, error detection (red wavy lines), and auto-completion (Ctrl+Space).</li>
+            <li><strong>Right Side:</strong> Command Library.</li>
+        </ul>
+
+        <h3 id="wizards">Command Color Coding</h3>
+        <p>The command list uses colors to distinguish sources:</p>
+        <ul>
+            <li><span style="color:#003366; font-weight:bold;">■ Blue (Standard):</span> Native commands (Navigation, Visibility, Text manipulation).</li>
+            <li><span style="color:#b35900; font-weight:bold;">■ Gold/Orange (Plugin):</span> External capabilities (Databases, CSV, Special Animations).</li>
+        </ul>
+        <p><strong>To use a Wizard:</strong> Double-click a command in the list. A dialog will appear asking for parameters, then it writes the Python code for you.</p>
+
+        <!-- SECTION 4 -->
+        <h1 id="scripting-intro">4. Python Scripting Guide</h1>
+        
+        <p>When you write code in a button, it executes within the application's scope. You don't need `def main():`. Just write the logic directly.</p>
+
+        <h2 id="internal-api">Internal API</h2>
+        <p>These functions are available globally in your scripts:</p>
+
+        <table>
+            <tr><th>Function</th><th>Description</th></tr>
+            <tr><td><code>find_widget("id")</code></td><td>Returns the widget object. Use <code>.text()</code>, <code>.setText()</code>, <code>.show()</code>, etc.</td></tr>
+            <tr><td><code>goto_page("Name")</code></td><td>Switches the view to another page defined in the "Create" tab.</td></tr>
+            <tr><td><code>show_message("Title","Msg")</code></td><td>Shows a native popup alert.</td></tr>
+            <tr><td><code>close_application()</code></td><td>Exits the program.</td></tr>
+            <tr><td><code>self</code></td><td>Access to the main `QMainWindow`.</td></tr>
+        </table>
+
+        <h2 id="variables">State Management (ctx)</h2>
+        <p>Variables declared in a script die when the script finishes. To store data <strong>persistently</strong> (like a score, username, or toggle state), use the dictionary <code>ctx</code>.</p>
+
+        <h4>Example: A Counter</h4>
+        <pre><code class="python"><span class="com"># Check if variable exists, if not, initialize it</span>
+<span class="kw">if</span> <span class="str">'count'</span> <span class="kw">not in</span> ctx:
+    ctx[<span class="str">'count'</span>] = 0
+
+<span class="com"># Increment</span>
+ctx[<span class="str">'count'</span>] += 1
+
+<span class="com"># Update UI</span>
+<span class="func">find_widget</span>(<span class="str">"lbl_counter"</span>).setText(<span class="str">str</span>(ctx[<span class="str">'count'</span>]))</code></pre>
+
+        <h2 id="debugging">Debugging Console</h2>
+        <p>If your script fails, nothing might happen. To see errors:</p>
+        <ol>
+            <li>Run the project with <kbd>F5</kbd>.</li>
+            <li>A bottom panel <strong>"Console / Debugger"</strong> will appear.</li>
+            <li><code>print("hello")</code> output and Python Errors (Tracebacks) will appear there.</li>
+        </ol>
+
+        <!-- SECTION 5: NEW ADDITION -->
+        <h1 id="functions-subs">5. Functions & Subroutines</h1>
+        
+        <p>In EasyPy Desktop, you don't use "Modules" or "Forms" in the Visual Basic style. Instead, you use Python's dynamic nature to organize your code. This section explains how to define reusable logic.</p>
+
+        <h2 id="local-functions">Local Functions</h2>
+        <p>If you have complex logic inside a single button, you can define helper functions right inside the event script. These functions exist <strong>only</strong> while that event is running.</p>
+        
+        <h4>Example: Calculating Taxes</h4>
+        <pre><code class="python"><span class="com"># Define a local helper</span>
+<span class="kw">def</span> <span class="func">calculate_total</span>(price):
+    <span class="kw">return</span> price * 1.21
+
+<span class="com"># Main Logic</span>
+input_val = <span class="func">find_widget</span>(<span class="str">"input_price"</span>).text()
+<span class="kw">if</span> input_val:
+    val = <span class="func">float</span>(input_val)
+    final_price = <span class="func">calculate_total</span>(val)
+    <span class="func">find_widget</span>(<span class="str">"lbl_result"</span>).setText(<span class="str">f"${final_price:.2f}"</span>)</code></pre>
+
+        <h2 id="global-functions">Global Subroutines (Public Subs)</h2>
+        <p>To create a function that can be called from <strong>any page</strong> or widget (like a Public Sub in a Module), you should store the function in the <strong><code>ctx</code></strong> dictionary.</p>
+
+        <h4>Step A: Define it (e.g., in "Startup" or "Master Page")</h4>
+        <p>Write this code in a button or script that runs once at the beginning:</p>
+        <pre><code class="python"><span class="com"># Define the function</span>
+<span class="kw">def</span> <span class="func">log_system_event</span>(message):
+    <span class="kw">import</span> datetime
+    time = datetime.datetime.now().strftime(<span class="str">"%H:%M:%S"</span>)
+    <span class="kw">print</span>(<span class="str">f"[{time}] {message}"</span>)
+
+<span class="com"># Store it in ctx to make it global</span>
+ctx[<span class="str">'log'</span>] = log_system_event</code></pre>
+
+        <h4>Step B: Call it (from any other widget)</h4>
+        <pre><code class="python"><span class="com"># Now you can use it anywhere</span>
+<span class="kw">if</span> <span class="str">'log'</span> <span class="kw">in</span> ctx:
+    ctx[<span class="str">'log'</span>](<span class="str">"User clicked Save"</span>)</code></pre>
+
+        <h2 id="app-methods">Attaching to 'self' (Advanced)</h2>
+        <p>For cleaner syntax, advanced users can attach functions directly to the main window instance (<code>self</code>). This creates methods that persist as long as the app is running.</p>
+
+        <pre><code class="python"><span class="kw">def</span> <span class="func">open_google_func</span>():
+    <span class="kw">import</span> webbrowser
+    webbrowser.open(<span class="str">"https://google.com"</span>)
+
+<span class="com"># Attach to application window</span>
+self.open_google = open_google_func
+
+<span class="com"># Usage later:</span>
+<span class="com"># self.open_google()</span></code></pre>
+
+        <!-- SECTION 6 (Renumbered) -->
+        <h1 id="sqlite">6. Advanced Topics</h1>
+
+        <h3 id="sqlite">SQLite Databases</h3>
+        <p>Use the <strong>SQLite Manager Plugin</strong> (found in the "Plugins" tab). It provides a high-level Grid widget.</p>
+        
+        <p><strong>Workflow:</strong></p>
+        <ol>
+            <li>Drag <code>SQLite Grid</code> to canvas. ID: <code>my_grid</code>.</li>
+            <li>Create a button "Connect". Use the wizard <strong>"Initialize DB"</strong>.</li>
+            <li>Create inputs for data (e.g., Name, Phone).</li>
+            <li>Create a button "Add". Use the wizard <strong>"Insert Record"</strong> and map the inputs to columns.</li>
+        </ol>
+
+        <h3 id="http">HTTP Requests</h3>
+        <p>The library <code>requests</code> is pre-installed. You can call APIs easily.</p>
+<pre><code class="python"><span class="kw">import</span> requests
+
+<span class="kw">try</span>:
+    r = requests.get(<span class="str">"https://api.coindesk.com/v1/bpi/currentprice.json"</span>)
+    data = r.json()
+    price = data[<span class="str">'bpi'</span>][<span class="str">'USD'</span>][<span class="str">'rate'</span>]
+    
+    <span class="func">find_widget</span>(<span class="str">"lbl_price"</span>).setText(<span class="str">f"Bitcoin: ${price}"</span>)
+<span class="kw">except</span> Exception <span class="kw">as</span> e:
+    <span class="func">show_message</span>(<span class="str">"Error"</span>, <span class="str">str</span>(e))</code></pre>
+
+        <h3 id="file-system">File System & Paths</h3>
+        <p>When compiling to EXE, files are unpacked to a temp folder. To load assets correctly in code, use <code>resource_path()</code> if using the internal API helpers, OR build paths dynamically.</p>
+        <p><strong>Best Practice:</strong> Keep everything in the <code>assets</code> folder.</p>
+
+        <!-- SECTION 7 (Renumbered) -->
+        <h1 id="plugin-sdk">7. Plugin SDK</h1>
+        <p>You can extend EasyPy by writing Python scripts in the <code>plugins_user</code> folder.</p>
+
+        <h4>Minimal Plugin Structure (my_plugin.py):</h4>
+<pre><code class="python"><span class="kw">from</span> PySide6.QtWidgets <span class="kw">import</span> QPushButton
+
+<span class="com"># 1. Metadata</span>
+PLUGIN_METADATA = {
+    <span class="str">'name'</span>: {<span class="str">'en'</span>: <span class="str">"My Button"</span>},
+    <span class="str">'version'</span>: <span class="str">"1.0"</span>,
+    <span class="str">'author'</span>: <span class="str">"Me"</span>
+}
+
+<span class="com"># 2. The Widget Class</span>
+<span class="kw">class</span> <span class="typ">MyButton</span>(QPushButton):
+    <span class="kw">def</span> <span class="func">__init__</span>(<span class="kw">self</span>, parent=<span class="kw">None</span>):
+        <span class="func">super</span>().__init__(parent)
+        <span class="kw">self</span>.setText(<span class="str">"Hello Plugin"</span>)
+
+<span class="com"># 3. Initialization Hook</span>
+<span class="kw">def</span> <span class="func">initialize_plugin</span>(mw):
+    <span class="com"># id, class, width, height, default_signal</span>
+    mw.register_plugin_tool(<span class="str">'my_btn'</span>, MyButton, 100, 30, <span class="str">'clicked'</span>)</code></pre>
+
+        <h2 id="ai-integration">AI Configuration</h2>
+        <p>Go to the AI Tab and click the Gear icon (⚙). You can configure:</p>
+        <ul>
+            <li><strong>Endpoint:</strong> Defaults to Pollinations.ai (Free/Public). You can change it to <code>https://api.openai.com/v1</code> or a local Ollama server.</li>
+            <li><strong>Model:</strong> <code>gpt-4o</code>, <code>llama3</code>, etc.</li>
+            <li><strong>Key:</strong> Your API Key (leave empty for Pollinations).</li>
+        </ul>
+
+        <!-- SECTION 8 (Renumbered) -->
+        <h1 id="compiling">8. Building .EXE</h1>
+        <p>Press <kbd>F9</kbd> to compile.</p>
+        
+        <h3>The "Smart Compiler"</h3>
+        <p>EasyPy automatically scans your code to detect dependencies.</p>
+        <ul>
+            <li>If you use <code>requests</code>, it includes SSL libraries.</li>
+            <li>If you use <code>sqlite3</code>, it includes database drivers.</li>
+            <li>If you use <code>WebView</code> or <code>Media</code>, it includes the heavy Qt WebEngine/Multimedia DLLs.</li>
+        </ul>
+        
+        <div class="alert alert-danger">
+            <span class="icon">⚠️</span>
+            <div><strong>Antivirus Warning:</strong> Compiled Python EXEs (PyInstaller) are often flagged as false positives by Windows Defender. You may need to exclude the folder or sign the EXE.</div>
+        </div>
+
+        <h2 id="licensing">Pro Features</h2>
+        <p>The free version is fully functional but shows "DEMO" in the title.</p>
+        <ul>
+            <li><strong>Pro Version:</strong> Allows custom Icons (.ico) and Splash Screens (loading images).</li>
+            <li><strong>Activation:</strong> Obtain a license file (<code>license.epd</code>) and load it via <code>Help > Activate Pro</code>.</li>
+        </ul>
+
+        <!-- SECTION 9 (Renumbered) -->
+        <h1 id="shortcuts">9. Appendices</h1>
+
+        <h3>Keyboard Shortcuts</h3>
+        <table>
+            <tr><th>Key</th><th>Action</th></tr>
+            <tr><td><kbd>Ctrl</kbd> + <kbd>N</kbd></td><td>New Project</td></tr>
+            <tr><td><kbd>Ctrl</kbd> + <kbd>O</kbd></td><td>Open Project</td></tr>
+            <tr><td><kbd>Ctrl</kbd> + <kbd>S</kbd></td><td>Save Project</td></tr>
+            <tr><td><kbd>Ctrl</kbd> + <kbd>Z</kbd></td><td>Undo</td></tr>
+            <tr><td><kbd>Ctrl</kbd> + <kbd>Y</kbd></td><td>Redo</td></tr>
+            <tr><td><kbd>Ctrl</kbd> + <kbd>D</kbd></td><td>Duplicate Widget</td></tr>
+            <tr><td><kbd>Delete</kbd></td><td>Delete Widget</td></tr>
+            <tr><td><kbd>F5</kbd></td><td>Run / Test Project</td></tr>
+            <tr><td><kbd>F9</kbd></td><td>Compile to EXE</td></tr>
+            <tr><td><kbd>F12</kbd></td><td>View Generated Python Code</td></tr>
+            <tr><td><kbd>Ctrl</kbd> + <kbd>Space</kbd></td><td>Trigger IntelliSense (in Editor)</td></tr>
+        </table>
+
+        <h3 id="troubleshooting">Troubleshooting</h3>
+        
+        <h4>"Runtime Python not found"</h4>
+        <p>The compiler needs the <code>runtime</code> folder next to the main executable. If you moved the exe, move the folder too.</p>
+
+        <h4>"ImportError: No module named..." in EXE</h4>
+        <p>If you import a non-standard library (e.g., <code>pandas</code>), you must install it into the <code>runtime</code> python environment using the "Manage Libraries" tool in the "Project" menu.</p>
+
+        <h4>Video/Audio not playing</h4>
+        <p>Ensure the multimedia backend codecs are installed on Windows (K-Lite Codec Pack often helps if system codecs are missing). EasyPy tries to bundle the Qt Multimedia DLLs, but it relies on the OS for decoding.</p>
+
+        <br><br><br><br>
+        <p style="text-align: center; color: #888;">&copy; 2026 EasyPy Desktop by Emo. All rights reserved.</p>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // TOC Search
+        const searchInput = document.getElementById('search-input');
+        const tocLinks = document.querySelectorAll('.toc-link');
+        const tocCats = document.querySelectorAll('.toc-cat');
+
+        searchInput.addEventListener('input', function(e) {
+            const term = e.target.value.toLowerCase();
+            
+            tocLinks.forEach(link => {
+                const text = link.textContent.toLowerCase();
+                link.style.display = text.includes(term) ? 'block' : 'none';
+            });
+
+            // Hide empty categories
+            tocCats.forEach(cat => {
+                let next = cat.nextElementSibling;
+                let hasVisible = false;
+                while(next && next.classList.contains('toc-link')) {
+                    if(next.style.display !== 'none') hasVisible = true;
+                    next = next.nextElementSibling;
+                }
+                cat.style.display = (hasVisible || term === '') ? 'block' : 'none';
+            });
+        });
+
+        // Smooth Scroll & Active Link
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                // Set active class
+                tocLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+
+                if (targetElement) {
+                    document.getElementById('content').scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
