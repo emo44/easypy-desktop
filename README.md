@@ -16,7 +16,7 @@ It combines the simplicity of **drag-and-drop UI design** with the power of Pyth
 ---
 ## Demo
 
-Quick demo of **EasyPyDesktop Beta 1.5**, an all-in-one rapid development tool built with **Python and PySide6** to create **Windows EXE desktop applications**, including pip and runtime.
+Quick demo of **EasyPyDesktop Beta 1.5**
 
 [![EasyPyDesktop Beta 1.5 Demo](https://img.youtube.com/vi/dVSCWRqA7pQ/0.jpg)](https://youtu.be/dVSCWRqA7pQ)
 
