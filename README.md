@@ -14,8 +14,11 @@ EasyPy Desktop is an **all-in-one visual development environment (IDE)** for **P
 It combines the simplicity of **drag-and-drop UI design** with the power of Python scripting and the ability to generate **standalone Windows executables**.
 
 ---
+## Demo
 
-<img width="1395" height="825" alt="EasyPy Desktop Screenshot" src="https://github.com/user-attachments/assets/81224d60-b772-41ad-85ac-7c618d99de41" />
+Quick demo of **EasyPyDesktop Beta 1.5**, an all-in-one rapid development tool built with **Python and PySide6** to create **Windows EXE desktop applications**, including pip and runtime.
+
+[![EasyPyDesktop Beta 1.5 Demo](https://img.youtube.com/vi/dVSCWRqA7pQ/0.jpg)](https://youtu.be/dVSCWRqA7pQ)
 
 ---
 
