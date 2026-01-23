@@ -22,6 +22,11 @@ Quick demo of **EasyPyDesktop Beta 1.5**
 
 ---
 
+Beta 1.6 Enhacements
+
+<img width="1402" height="832" alt="Captura de pantalla 2026-01-23 114042" src="https://github.com/user-attachments/assets/0ee2afec-4009-46bc-a37c-2898506f423b" />
+
+
 ## 🚀 What is EasyPy Desktop?
 
 EasyPy Desktop is designed for developers who want to:
