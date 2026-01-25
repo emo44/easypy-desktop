@@ -2,7 +2,8 @@
 **Visual Design meets the power of clean Python architecture.**
 
 <p align="center">
-  <img src="https://img.shields.io/github/downloads/emo44/easypy-desktop/total?style=flat-square&logo=github&label=Total%20Downloads&color=blue" />
+ ![Total Downloads](https://img.shields.io/github/downloads/emo44/easypy-desktop/total?style=flat-square&cacheSeconds=60)
+
   <img src="https://img.shields.io/github/v/release/emo44/easypy-desktop?include_prereleases&sort=semver&style=flat-square&logo=github&label=Current%20Release&color=yellow" />
   <img src="https://img.shields.io/badge/Status-Active_Development-green?style=flat-square&logo=github" />
   <img src="https://img.shields.io/badge/Language-Python-3776AB?style=flat-square&logo=python&logoColor=white" />
