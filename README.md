@@ -1,11 +1,24 @@
 # EasyPy Desktop 🖥️🐍
 **Visual Design meets the power of clean Python architecture.**
 <p align="center">
-  <img src="https://img.shields.io/github/downloads/emo44/easypy-desktop/total?style=flat-square&cacheSeconds=60" />
-  <img src="https://img.shields.io/github/v/release/emo44/easypy-desktop?include_prereleases&sort=semver&style=flat-square&logo=github&label=Current%20Release&color=yellow" />
-  <img src="https://img.shields.io/badge/Status-Active_Development-green?style=flat-square&logo=github" />
-  <img src="https://img.shields.io/badge/Language-Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Output-Native_Python_Code-FFE873?style=flat-square&logo=python&logoColor=black" />
+  <!-- Downloads Badge -> Va a Releases -->
+  <a href="https://github.com/emo44/easypy-desktop/releases">
+    <img src="https://img.shields.io/github/downloads/emo44/easypy-desktop/total?style=flat-square&cacheSeconds=60" alt="Total Downloads"/>
+  </a>
+
+  <!-- Version Badge -> Va a la última release -->
+  <a href="https://github.com/emo44/easypy-desktop/releases/latest">
+    <img src="https://img.shields.io/github/v/release/emo44/easypy-desktop?include_prereleases&sort=semver&style=flat-square&logo=github&label=Current%20Release&color=yellow" alt="Latest Release"/>
+  </a>
+
+  <!-- Status -->
+  <img src="https://img.shields.io/badge/Status-Active_Development-green?style=flat-square&logo=github" alt="Status Active"/>
+
+  <!-- Language -->
+  <img src="https://img.shields.io/badge/Language-Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
+
+  <!-- Output -->
+  <img src="https://img.shields.io/badge/Output-Native_Python_Code-FFE873?style=flat-square&logo=python&logoColor=black" alt="Native Python Code"/>
 </p>
 
 
