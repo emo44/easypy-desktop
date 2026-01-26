@@ -16,9 +16,10 @@ Unlike other visual tools that trap you in a runtime "black box," EasyPy generat
 
 ---
 
-### ⚡ Beta 1.7 Enhancements: Native Code Generation
+### ⚡ Beta 1.9 Enhancements: Automatic Documentation
 
-<img width="1402" height="832" alt="Captura de pantalla 2026-01-23 114042" src="https://github.com/user-attachments/assets/0ee2afec-4009-46bc-a37c-2898506f423b" />
+<img width="1395" height="824" alt="version19" src="https://github.com/user-attachments/assets/47cd3d84-960a-446f-b847-17ea6bb24dcb" />
+
 
 ## 🚀 What is EasyPy Desktop?
 
