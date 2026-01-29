@@ -11,11 +11,10 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
-    <!-- Gumroad Overlay (Opcional: hace que la compra sea una ventana emergente en lugar de irse a otra web) -->
-    <script src="https://gumroad.com/js/gumroad.js"></script>
+    <!-- NOTA: Se ha eliminado el script de Gumroad para evitar pop-ups -->
 
     <style>
-        :root { --primary-blue: #007acc; --gumroad-pink: #ff90e8; --dark-bg: #0d1117; --card-bg: #161b22; }
+        :root { --primary-blue: #007acc; --dark-bg: #0d1117; --card-bg: #161b22; }
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0d1117; color: #c9d1d9; }
         .navbar { background-color: rgba(13, 17, 23, 0.95); border-bottom: 1px solid #30363d; backdrop-filter: blur(10px); }
         .hero-gradient { background: radial-gradient(circle at top right, #1e293b, #0d1117); padding: 100px 0 60px; }
@@ -27,13 +26,13 @@
         .badge-pro { background: linear-gradient(45deg, #f59e0b, #d97706); color: white; font-size: 0.7rem; vertical-align: middle; padding: 4px 12px; border-radius: 20px; font-weight: bold; }
         footer { border-top: 1px solid #30363d; padding: 60px 0; }
         
-        /* Botones personalizados */
+        /* Estilos de botones */
         .btn-primary { background-color: var(--primary-blue); border: none; padding: 12px 30px; font-weight: 600; }
         .btn-primary:hover { background-color: #0062a3; }
         
-        /* Botón Gumroad destacado */
-        .btn-gumroad { background-color: #ffffff; color: #000; border: none; padding: 12px 30px; font-weight: 800; border: 2px solid white; transition: 0.2s; }
-        .btn-gumroad:hover { background-color: #e0e0e0; border-color: #e0e0e0; color: #000; transform: scale(1.05); }
+        /* Botón para Comprar Licencia (Destacado) */
+        .btn-license { background-color: #ffd700; color: #000; border: none; padding: 12px 30px; font-weight: 800; border: 2px solid #ffd700; transition: 0.2s; }
+        .btn-license:hover { background-color: #ffea00; transform: scale(1.05); color: #000; }
 
         .btn-outline-light { border-color: #30363d; color: #f0f6fc; }
         .text-gradient { background: linear-gradient(to right, #58a6ff, #bc8cff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -55,8 +54,9 @@
                     <li class="nav-item"><a class="nav-link" href="#core">Features</a></li>
                     <li class="nav-item"><a class="nav-link" href="#ai">AI Assistant</a></li>
                     <li class="nav-item">
-                        <a class="btn btn-primary ms-lg-4" href="https://emosoft.gumroad.com/l/easypydesktop">
-                            <i class="bi bi-cart-fill me-2"></i>Get App
+                        <!-- Enlace de Descarga Directa (Gratis) -->
+                        <a class="btn btn-primary ms-lg-4" href="https://emosoft.gumroad.com/l/easypydesktop" target="_blank">
+                            <i class="bi bi-download me-2"></i>Download App
                         </a>
                     </li>
                 </ul>
@@ -73,10 +73,17 @@
             </p>
             
             <div class="d-flex justify-content-center flex-wrap gap-3 mb-5">
-                <!-- ÚNICO BOTÓN PRINCIPAL: GUMROAD -->
-                <a href="https://emosoft.gumroad.com/l/easypydesktop" class="btn btn-gumroad btn-lg px-5">
-                    <i class="bi bi-download me-2 text-dark"></i>Download Now
+                
+                <!-- BOTÓN 1: DESCARGAR APP (Gratis) -->
+                <a href="https://emosoft.gumroad.com/l/easypydesktop" target="_blank" class="btn btn-primary btn-lg px-5">
+                    <i class="bi bi-download me-2"></i>Download Free App
                 </a>
+
+                <!-- BOTÓN 2: COMPRAR LICENCIA PRO (Pago) -->
+                <a href="https://emosoft.gumroad.com/l/easypydesktoplicense" target="_blank" class="btn btn-license btn-lg px-5">
+                    <i class="bi bi-star-fill me-2"></i>Buy Pro License
+                </a>
+
             </div>
 
             <div class="ide-preview mx-auto mb-5" style="max-width: 950px;">
@@ -207,7 +214,17 @@
             </div>
             <h4 class="text-white fw-bold mb-4">Build and distribute your Python apps now.</h4>
             <div class="d-flex justify-content-center gap-3 mb-5">
-                <a href="https://emosoft.gumroad.com/l/easypydesktop" class="btn btn-primary btn-lg">Download Now</a>
+                
+                <!-- Footer: Descargar App -->
+                <a href="https://emosoft.gumroad.com/l/easypydesktop" target="_blank" class="btn btn-outline-secondary btn-lg">
+                    Download Free App
+                </a>
+
+                <!-- Footer: Comprar Licencia -->
+                <a href="https://emosoft.gumroad.com/l/easypydesktoplicense" target="_blank" class="btn btn-primary btn-lg">
+                    Buy Pro License
+                </a>
+
             </div>
             <p class="text-secondary small">Created with ❤️ by Emo.</p>
             <p class="text-secondary" style="font-size: 0.75rem;">EasyPy Desktop is proprietary software. All rights reserved.</p>
