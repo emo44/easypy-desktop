@@ -10,8 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Gumroad Overlay (Opcional: hace que la compra sea una ventana emergente en lugar de irse a otra web) -->
+    <script src="https://gumroad.com/js/gumroad.js"></script>
+
     <style>
-        :root { --primary-blue: #007acc; --dark-bg: #0d1117; --card-bg: #161b22; }
+        :root { --primary-blue: #007acc; --gumroad-pink: #ff90e8; --dark-bg: #0d1117; --card-bg: #161b22; }
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0d1117; color: #c9d1d9; }
         .navbar { background-color: rgba(13, 17, 23, 0.95); border-bottom: 1px solid #30363d; backdrop-filter: blur(10px); }
         .hero-gradient { background: radial-gradient(circle at top right, #1e293b, #0d1117); padding: 100px 0 60px; }
@@ -22,7 +26,15 @@
         .terminal-window { background: #000; color: #00ff00; font-family: 'Fira Code', monospace; padding: 15px; font-size: 0.85rem; border-radius: 0 0 12px 12px; border-top: 1px solid #333; }
         .badge-pro { background: linear-gradient(45deg, #f59e0b, #d97706); color: white; font-size: 0.7rem; vertical-align: middle; padding: 4px 12px; border-radius: 20px; font-weight: bold; }
         footer { border-top: 1px solid #30363d; padding: 60px 0; }
+        
+        /* Botones personalizados */
         .btn-primary { background-color: var(--primary-blue); border: none; padding: 12px 30px; font-weight: 600; }
+        .btn-primary:hover { background-color: #0062a3; }
+        
+        /* Botón Gumroad destacado */
+        .btn-gumroad { background-color: #ffffff; color: #000; border: none; padding: 12px 30px; font-weight: 800; border: 2px solid white; transition: 0.2s; }
+        .btn-gumroad:hover { background-color: #e0e0e0; border-color: #e0e0e0; color: #000; transform: scale(1.05); }
+
         .btn-outline-light { border-color: #30363d; color: #f0f6fc; }
         .text-gradient { background: linear-gradient(to right, #58a6ff, #bc8cff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
@@ -43,8 +55,8 @@
                     <li class="nav-item"><a class="nav-link" href="#core">Features</a></li>
                     <li class="nav-item"><a class="nav-link" href="#ai">AI Assistant</a></li>
                     <li class="nav-item">
-                        <a class="btn btn-primary ms-lg-4 js-download-latest" href="https://github.com/emo44/easypy-desktop/releases">
-                            <i class="bi bi-download me-2"></i>Download Installer
+                        <a class="btn btn-primary ms-lg-4" href="https://emosoft.gumroad.com/l/easypydesktop">
+                            <i class="bi bi-cart-fill me-2"></i>Get App
                         </a>
                     </li>
                 </ul>
@@ -60,12 +72,10 @@
                 Create professional PySide6 apps visually. EasyPy generates <b>clean, structured Python classes</b> that you can open, edit, and debug in VS Code or PyCharm.
             </p>
             
-            <div class="d-flex justify-content-center gap-3 mb-5">
-                <a href="https://github.com/emo44/easypy-desktop/releases" class="btn btn-primary btn-lg px-5 js-download-latest">
-                    Download Latest Release
-                </a>
-                <a href="https://github.com/emo44/easypy-desktop/blob/main/LICENSE.txt" target="_blank" class="btn btn-outline-light btn-lg px-5">
-                    View License (EULA)
+            <div class="d-flex justify-content-center flex-wrap gap-3 mb-5">
+                <!-- ÚNICO BOTÓN PRINCIPAL: GUMROAD -->
+                <a href="https://emosoft.gumroad.com/l/easypydesktop" class="btn btn-gumroad btn-lg px-5">
+                    <i class="bi bi-download me-2 text-dark"></i>Download Now
                 </a>
             </div>
 
@@ -79,7 +89,6 @@
                     <small class="ms-3 text-secondary">EasyPy Desktop IDE - Workspace Preview</small>
                 </div>
                 
-                <!-- IMAGEN RESTAURADA AQUÍ -->
                 <img src="https://github.com/user-attachments/assets/47cd3d84-960a-446f-b847-17ea6bb24dcb" class="img-fluid" alt="EasyPy Desktop IDE Interface">
                 
                 <div class="terminal-window text-start">
@@ -198,8 +207,7 @@
             </div>
             <h4 class="text-white fw-bold mb-4">Build and distribute your Python apps now.</h4>
             <div class="d-flex justify-content-center gap-3 mb-5">
-                <a href="https://github.com/emo44/easypy-desktop/releases" class="btn btn-primary btn-lg js-download-latest">Download Installer</a>
-                <a href="https://github.com/emo44/easypy-desktop/blob/main/LICENSE.txt" target="_blank" class="btn btn-outline-secondary btn-lg">View License (EULA)</a>
+                <a href="https://emosoft.gumroad.com/l/easypydesktop" class="btn btn-primary btn-lg">Download Now</a>
             </div>
             <p class="text-secondary small">Created with ❤️ by Emo.</p>
             <p class="text-secondary" style="font-size: 0.75rem;">EasyPy Desktop is proprietary software. All rights reserved.</p>
@@ -212,42 +220,5 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- JS para detectar la última Release (incluyendo Betas) -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const repo = "emo44/easypy-desktop";
-            const downloadButtons = document.querySelectorAll('.js-download-latest');
-
-            if(downloadButtons.length > 0) {
-                // Obtenemos /releases (sin 'latest') para ver también las pre-releases/betas
-                fetch(`https://api.github.com/repos/${repo}/releases`)
-                    .then(response => {
-                        if (!response.ok) throw new Error("Network response was not ok");
-                        return response.json();
-                    })
-                    .then(data => {
-                        if (Array.isArray(data) && data.length > 0) {
-                            const latestRelease = data[0]; // La primera es la más nueva creada
-                            
-                            // Buscar el .exe
-                            const installerAsset = latestRelease.assets.find(asset => asset.name.toLowerCase().endsWith('.exe'));
-                            
-                            if (installerAsset) {
-                                downloadButtons.forEach(btn => {
-                                    btn.href = installerAsset.browser_download_url;
-                                    btn.innerHTML = `<i class="bi bi-download me-2"></i>Download ${latestRelease.tag_name}`;
-                                    btn.title = `Download ${latestRelease.tag_name} (${latestRelease.prerelease ? 'Beta' : 'Stable'})`;
-                                });
-                                console.log(`Links updated to version: ${latestRelease.tag_name}`);
-                            }
-                        }
-                    })
-                    .catch(error => {
-                        console.log("Using default links.", error);
-                    });
-            }
-        });
-    </script>
 </body>
 </html>
