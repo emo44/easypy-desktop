@@ -1,7 +1,8 @@
 {
-    "tag_name": "2.1-beta.11",
-    "html_url": "https://github.com/emo44/easypy-desktop/releases/tag/2.1-beta.11",
-    "body": "## 🚨 Beta Program Ended\n\nThis is the **final public beta release** of EasyPy Desktop.\n\nThe beta phase has officially ended.  \nStarting with version **2.2**, EasyPy Desktop is released as a **Stable Early Access** product.\n\n### 🔽 Where to Download Now\n\nAll official downloads are now hosted on Gumroad:\n\n👉 EasyPy Desktop (Free Download):  \nhttps://emosoft.gumroad.com/l/easypydesktop\n\n👉 PRO License (Optional, unlocks EXE export):  \nhttps://emosoft.gumroad.com/l/easypydesktoplicense\n\n### ℹ️ Important Notes\n\n- There will be **no further beta or prerelease builds on GitHub**\n- GitHub will continue to be used for changelogs and issue tracking\n- The same application is used for Free and PRO modes\n- Distribution features require a PRO License activated inside the app\n\nThank you to everyone who participated in the beta and provided feedback ❤️"
+    "tag_name": "2.2",
+    "html_url": "https://emosoft.gumroad.com/l/easypydesktop",
+    "body": "**🎉 First Stable Early Access Release**\n\nThis is the first **stable Early Access** release of **EasyDesktop**.\n\nVersion 2.2 marks an important milestone: the project is now considered stable for real-world usage while continuing to evolve through Early Access.\n\n### ✨ What’s New in This Release\n* Fixed several substantial bugs reported during the beta phase.\n* Performance optimizations across the editor and compiler.\n* Numerous new and improved examples to help you get started faster and build better applications.\n\n### 🛒 Availability\nEasyDesktop 2.2 is available for download on Gumroad:\n\n👉 Free Early Access Download: https://emosoft.gumroad.com/l/easypydesktop\n\n👉 PRO License (Optional, unlocks EXE export and branding): https://emosoft.gumroad.com/l/easypydesktoplicense\n\n### ⚠️ Early Access Limitations\nThis Early Access version has some restrictions:\n* EXE generation is disabled\n* Custom application icon is disabled\n* Splash screen customization is disabled\n\n### 🔓 Full Version & License\nTo unlock all features, purchase a **PRO License** on Gumroad and activate it inside the application.\n\nThank you for supporting EasyDesktop during its Early Access stage!"
 }
+
 
 
