@@ -5,6 +5,9 @@
 
 ---
 
+<img width="1396" height="822" alt="Captura de pantalla 2026-01-30 012554" src="https://github.com/user-attachments/assets/03f448b8-26a3-4c20-81d9-54f0a1dc0b23" />
+
+
 ## 🚀 Project Status
 
 EasyPy Desktop is currently released as a **Stable Early Access** product.
