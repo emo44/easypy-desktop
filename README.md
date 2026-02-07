@@ -10,4 +10,4 @@
 
 ## 🚀 Project Status
 
-EasyPy Desktop is currently released as a **Early Access** proof of concept.
+EasyPy Desktop is currently released as a **Early Access**.
