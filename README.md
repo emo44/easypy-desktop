@@ -12,8 +12,6 @@
 
 ⚠️ The beta phase of EasyPy Desktop has ended.
 
-The project is currently inactive and all features are disabled.
-
 Thank you for your interest and support!
 
 
