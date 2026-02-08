@@ -10,5 +10,8 @@
 
 ## 🚀 Project Status
 
-FREE demo
-https://emosoft.gumroad.com/l/easypydesktop
+⚠️ The project is temporarily paused. 
+
+Currently, only the Free Edition is available. 
+
+Thank you for your interest and understanding!
