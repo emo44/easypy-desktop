@@ -10,9 +10,9 @@ By downloading, installing, or using EasyPy Desktop ("The Software"), you agree 
 
 "Emo Software" grants you a non-exclusive, non-transferable, limited license to use the Software on your computer.
 
-    DEMO/BETA VERSION: You may use the software for evaluation purposes. Applications created with the Demo version may include a forced splash screen and restrictions on customization.
+    DEMO/BETA/FREE VERSION: You may use the software for evaluation purposes. Applications created with the Demo version may include a forced splash screen and restrictions on customization.
 
-    PROFESSIONAL VERSION: Upon payment of the license fee, you are granted the right to use the full features of the Software for commercial and personal development without the restrictions of the Demo version.
+    PROFESSIONAL VERSION: Upon payment of the license fee, you are granted the right to use the full features of the Software for commercial and personal development without the restrictions of the Demo/Free version.
 
 2. OWNERSHIP OF GENERATED APPLICATIONS
 
@@ -52,7 +52,7 @@ You are solely responsible for the applications you create. "Emo Software" is no
 
 This license is effective until terminated. Your rights under this license will terminate automatically without notice if you fail to comply with any term(s) of this license. Upon termination, you shall cease all use of the Software and destroy all copies, full or partial, of the Software.
 
-Copyright (c) 2025 Emo Software. All Rights Reserved.
+Copyright (c) 2026 Emo. All Rights Reserved.
 ACUERDO DE LICENCIA DE USUARIO FINAL (EULA)
 
 EasyPy Desktop
@@ -107,4 +107,5 @@ Usted es el único responsable de las aplicaciones que cree. "Emo Software" no s
 
 Esta licencia es efectiva hasta su terminación. Sus derechos bajo esta licencia terminarán automáticamente sin previo aviso si incumple cualquiera de los términos de la misma. A su terminación, deberá cesar todo uso del Software y destruir todas las copias del mismo.
 
-Copyright (c) 2025 Emo Software. Todos los derechos reservados.
+Copyright (c) 2026 Emo . Todos los derechos reservados.
+
