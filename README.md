@@ -10,6 +10,8 @@
 
 ## 🚀 Project Status
 
-⚠️ The project is temporarily paused. 
+⚠️ The project is temporarily paused.
+
 
 Thank you for your interest and understanding!
+
