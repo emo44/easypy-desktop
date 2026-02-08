@@ -10,4 +10,5 @@
 
 ## 🚀 Project Status
 
-Development.
+FREE demo
+https://emosoft.gumroad.com/l/easypydesktop
