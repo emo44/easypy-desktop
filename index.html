@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyPy Desktop | Visual Builder to Native Python</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- NOTA: Se ha eliminado el script de Gumroad para evitar pop-ups -->
+
+    <style>
+        :root { --primary-blue: #007acc; --dark-bg: #0d1117; --card-bg: #161b22; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0d1117; color: #c9d1d9; }
+        .navbar { background-color: rgba(13, 17, 23, 0.95); border-bottom: 1px solid #30363d; backdrop-filter: blur(10px); }
+        .hero-gradient { background: radial-gradient(circle at top right, #1e293b, #0d1117); padding: 100px 0 60px; }
+        .feature-box { background: var(--card-bg); border: 1px solid #30363d; border-radius: 16px; padding: 25px; height: 100%; transition: all 0.3s ease; }
+        .feature-box:hover { border-color: var(--primary-blue); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .icon-gradient { font-size: 2rem; background: linear-gradient(45deg, #007acc, #41cd52); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 15px; }
+        .ide-preview { background: #1e1e1e; border: 1px solid #444; border-radius: 12px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8); }
+        .terminal-window { background: #000; color: #00ff00; font-family: 'Fira Code', monospace; padding: 15px; font-size: 0.85rem; border-radius: 0 0 12px 12px; border-top: 1px solid #333; }
+        .badge-pro { background: linear-gradient(45deg, #f59e0b, #d97706); color: white; font-size: 0.7rem; vertical-align: middle; padding: 4px 12px; border-radius: 20px; font-weight: bold; }
+        footer { border-top: 1px solid #30363d; padding: 60px 0; }
+        
+        /* Estilos de botones */
+        .btn-primary { background-color: var(--primary-blue); border: none; padding: 12px 30px; font-weight: 600; }
+        .btn-primary:hover { background-color: #0062a3; }
+        
+        /* Botón para Comprar Licencia (Destacado) */
+        .btn-license { background-color: #ffd700; color: #000; border: none; padding: 12px 30px; font-weight: 800; border: 2px solid #ffd700; transition: 0.2s; }
+        .btn-license:hover { background-color: #ffea00; transform: scale(1.05); color: #000; }
+
+        .btn-outline-light { border-color: #30363d; color: #f0f6fc; }
+        .text-gradient { background: linear-gradient(to right, #58a6ff, #bc8cff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="bi bi-terminal-fill me-2 text-primary"></i>EasyPy <span class="text-primary">Desktop</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#core">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ai">AI Assistant</a></li>
+                    <li class="nav-item">
+                        <!-- Enlace de Descarga Directa (Gratis) -->
+                        <a class="btn btn-primary ms-lg-4" href="https://emosoft.gumroad.com/l/easypydesktop" target="_blank">
+                            <i class="bi bi-download me-2"></i>Download App
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-gradient">
+        <div class="container text-center">
+            <h1 class="display-2 fw-800 mb-3">Visual Design.<br><span class="text-gradient">Native Python Code.</span></h1>
+            <p class="lead text-secondary mb-5 mx-auto" style="max-width: 800px;">
+                Create Windows PySide6 apps visually.
+            </p>
+            
+            <div class="d-flex justify-content-center flex-wrap gap-3 mb-5">
+                
+                <!-- BOTÓN 1: DESCARGAR APP (Gratis) -->
+                <a href="https://emosoft.gumroad.com/l/easypydesktop" target="_blank" class="btn btn-primary btn-lg px-5">
+                    <i class="bi bi-download me-2"></i>Download Free App
+                </a>
+
+                <!-- BOTÓN 2: COMPRAR LICENCIA PRO (Pago) -->
+                <a href="https://emosoft.gumroad.com/l/easypydesktoplicense" target="_blank" class="btn btn-license btn-lg px-5">
+                    <i class="bi bi-star-fill me-2"></i>Buy Pro License
+                </a>
+
+            </div>
+
+            <div class="ide-preview mx-auto mb-5" style="max-width: 950px;">
+                <div class="bg-dark p-2 d-flex align-items-center border-bottom border-secondary">
+                    <div class="d-flex gap-2 ms-2">
+                        <div class="rounded-circle bg-danger" style="width:10px;height:10px;"></div>
+                        <div class="rounded-circle bg-warning" style="width:10px;height:10px;"></div>
+                        <div class="rounded-circle bg-success" style="width:10px;height:10px;"></div>
+                    </div>
+                    <small class="ms-3 text-secondary">EasyPy Desktop IDE - Workspace Preview</small>
+                </div>
+                
+                <img width="1600" height="822" alt="Captura de pantalla 2026-01-30 012554" src="https://github.com/user-attachments/assets/03f448b8-26a3-4c20-81d9-54f0a1dc0b23" />
+                <div class="terminal-window text-start">
+                    <span>> Initializing Generator...</span><br>
+                    <span>> Converting UI to Native Python Classes... [OK]</span><br>
+                    <span>> Injecting Logic Methods... [OK]</span><br>
+                    <span class="text-info">> Project Compiled: Zero `exec()` overhead detected.</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Advanced Features -->
+    <section id="core" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-white">Visual IDE</h2>
+                <p class="text-secondary">Visual speed with the power of handwritten code structure.</p>
+            </div>
+            <div class="row g-4 text-start">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="bi bi-grid-3x3-gap icon-gradient"></i>
+                        <h5>Magnetic Grid Canvas</h5>
+                        <p class="small text-secondary">Advanced editor with <strong>Snap-to-Grid</strong>, smart alignment guides, and <strong>Interactive Gizmos</strong> for precise resizing.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="bi bi-code-square icon-gradient"></i>
+                        <h5>Native Code Output</h5>
+                        <p class="small text-secondary">Forget `exec()`. EasyPy generates standard Python methods (`def on_click...`) fully compatible with external IDEs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="bi bi-box-seam icon-gradient"></i>
+                        <h5>Built-in Pip Manager</h5>
+                        <p class="small text-secondary">Manage libraries directly from the IDE. Install any Python package from PyPI without touching the command line.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="bi bi-file-earmark-zip icon-gradient"></i>
+                        <h5>One-Click EXE</h5>
+                        <p class="small text-secondary">Compile your native code into standalone Windows executables with automatic asset bundling.(PRO)</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="bi bi-plugin icon-gradient"></i>
+                        <h5>Dynamic Plugin System</h5>
+                        <p class="small text-secondary">Drop any <code>.py</code> file into the plugins folder to add custom widgets, wizards, and specialized tools instantly.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="bi bi-bug icon-gradient"></i>
+                        <h5>Smart Debugging</h5>
+                        <p class="small text-secondary">Runtime errors now point to the <strong>exact line number</strong> in your logic, making troubleshooting effortless.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Assistant -->
+    <section id="ai" class="py-5" style="background-color: #090c10;">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5 text-start">
+                    <span class="badge-pro mb-3">AI ASSISTANT</span>
+                    <h2 class="display-5 fw-bold text-white mb-4">Project-Aware Intelligence</h2>
+                    <p class="text-secondary lead">Ask the built-in AI. It knows your widgets, your pages, and generates standard Python code for them.</p>
+                    <div class="mt-4">
+                        <div class="d-flex align-items-start mb-3">
+                            <i class="bi bi-cpu text-primary me-3 fs-4"></i>
+                            <div>
+                                <h6 class="mb-0 text-white">Open & Local Models</h6>
+                                <p class="small text-secondary">Works with OpenAI, LM Studio, or Ollama (Gemma, Llama 3) for 100% private development.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                            <i class="bi bi-clipboard-check text-primary me-3 fs-4"></i>
+                            <div>
+                                <h6 class="mb-0 text-white">Smart Copy</h6>
+                                <p class="small text-secondary">Instantly extract and copy generated code snippets directly to your Action Editor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="ide-preview text-start">
+                        <div class="p-4 bg-dark">
+                            <div class="mb-3">
+                                <span class="text-success fw-bold">User:</span>
+                                <p class="small">How do I add a new item to Listbox_1?</p>
+                            </div>
+                            <div class="p-3 rounded" style="background: #0d1117; border-left: 4px solid #007acc;">
+                                <span class="text-primary fw-bold">EasyPy AI:</span>
+                                <p class="small">Use this code for your widget:</p>
+                                <pre class="text-warning mb-0" style="font-size: 0.85rem;"><code>find_widget("Listbox_1").addItem("New Item")</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <div class="mb-4">
+                <i class="bi bi-terminal-fill fs-1 text-primary"></i>
+            </div>
+            <h4 class="text-white fw-bold mb-4">Build and distribute your Python apps now.</h4>
+            <div class="d-flex justify-content-center gap-3 mb-5">
+                
+                <!-- Footer: Descargar App -->
+                <a href="https://emosoft.gumroad.com/l/easypydesktop" target="_blank" class="btn btn-outline-secondary btn-lg">
+                    Download Free App
+                </a>
+
+                <!-- Footer: Comprar Licencia -->
+                <a href="https://emosoft.gumroad.com/l/easypydesktoplicense" target="_blank" class="btn btn-primary btn-lg">
+                    Buy Pro License
+                </a>
+
+            </div>
+            <p class="text-secondary small">Created with ❤️ by Emo.</p>
+            <p class="text-secondary" style="font-size: 0.75rem;">EasyPy Desktop is proprietary software. All rights reserved.</p>
+            <div class="fs-4 mt-4 text-secondary">
+                <a href="https://github.com/emo44/easypy-desktop" target="_blank" class="text-secondary mx-2">
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
