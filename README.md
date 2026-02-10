@@ -13,8 +13,7 @@
 EasyPy Desktop is currently released as a **Early Access** product.
 
 - The application is **free to download**
-- Distribution features are unlocked via a **separate PRO License**
-- Official binary downloads are hosted on **Gumroad**
+- Distribution features are unlocked via a **separate PRO License** (while available)
 
 ---
 
@@ -23,23 +22,13 @@ EasyPy Desktop is currently released as a **Early Access** product.
 👉 Download EasyPy Desktop (Free Edition):  
 https://emosoft.gumroad.com/l/easypydesktop
 
-👉 PRO License (optional, unlocks EXE export):  
-https://emosoft.gumroad.com/l/easypydesktoplicense
-
----
-
-## 🧩 How Licensing Works
-
-- You download EasyPy Desktop for free
-- The same application runs in Free or PRO mode
-- Entering a valid license key inside the app unlocks distribution features
-- No reinstallation required
-
 ---
 
 ## ✨ What is EasyPy Desktop?
 
-EasyPy Desktop is designed for developers who want the speed of a visual builder without losing control over their code.
+EasyPyDesktop is designed for hobbyists, students learning Python, and indie developers.
+
+Create desktop apps quickly without fighting complex Qt tooling,
 
 - **Visual UI Designer** with drag & drop workflow
 - **100% Native Python Code Generation**
@@ -49,7 +38,7 @@ EasyPy Desktop is designed for developers who want the speed of a visual builder
 
 ---
 
-## 🔓 Free vs PRO Features
+## 🔓 Free Edition
 
 ### Free Edition
 - Full editor and visual designer
@@ -57,11 +46,6 @@ EasyPy Desktop is designed for developers who want the speed of a visual builder
 - No time limits
 - Intended for development and testing
 
-### PRO License
-- One-click EXE compilation
-- Custom application icon
-- Splash screen customization
-- Removes all DEMO branding
 
 ---
 
