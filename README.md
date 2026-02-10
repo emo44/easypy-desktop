@@ -13,7 +13,6 @@
 EasyPy Desktop is currently released as a **Early Access** product.
 
 - The application is **free to download**
-- Distribution features are unlocked via a **separate PRO License** (while available)
 
 ---
 
