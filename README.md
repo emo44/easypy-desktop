@@ -16,13 +16,6 @@ EasyPy Desktop is currently released as a **Early Access** product.
 
 ---
 
-## 🔽 Download (Official)
-
-👉 Download EasyPy Desktop (Free Edition):  
-https://emosoft.gumroad.com/l/easypydesktop
-
----
-
 ## ✨ What is EasyPy Desktop?
 
 EasyPyDesktop is designed for hobbyists, students learning Python, and indie developers.
