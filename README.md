@@ -38,12 +38,9 @@ Create desktop apps quickly without fighting complex Qt tooling,
 - No time limits
 - Intended for development and testing
 
-"The only Python GUI builder that compiles to EXE in one click."
-
 Get it here:
 https://emosoft.gumroad.com/l/easypydesktop
 
-Python + Pyside6 Visual Builder For Windows
 ---
 
 ## 📌 About This Repository
