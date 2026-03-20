@@ -58,7 +58,7 @@ This GitHub repository is used to:
 
 Please note that **no direct technical support is provided**. 
 
-* 💬 **Questions & Community Help:** Want to share your projects? Please use **[GitHub Discussions](https://github.com/emo44/easypy-desktop/discussions)**. This is a user-to-user community space.
+* 💬 **Questions & Community Help:** Want to share your projects or plugins? Please use **[GitHub Discussions](https://github.com/emo44/easypy-desktop/discussions)**. This is a user-to-user community space.
 * 🐛 **Bug Reports:** If you encounter reproducible bugs, crashes, or glitches, please open an **[Issue](https://github.com/emo44/easypy-desktop/issues)**. 
 
 Community feedback helps shape future versions, but please ensure you use the correct channel!
