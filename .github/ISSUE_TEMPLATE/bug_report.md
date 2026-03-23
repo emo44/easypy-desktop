@@ -37,6 +37,8 @@ If applicable, add screenshots to help explain your problem.
 **Minimal project file (.json):**
 Attach a minimal .json project file that reproduces the issue — the smallest project that still shows the bug. This is the most helpful thing you can provide.
 
+> ⚠️ AI-generated projects are not accepted as bug reports. The project must be created manually in EasyPyDesktop. AI-generated code in `global_code` or direct PySide6/Qt calls outside of EPD's widget system may cause issues that are not reproducible in a standard EPD project
+
 ---
 > ⚠️ Feature requests and questions belong in [Discussions](../../discussions), not Issues.
 > Issues without version number and reproduction steps may be closed without response.
