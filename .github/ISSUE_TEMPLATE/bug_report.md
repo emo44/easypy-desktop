@@ -1,32 +1,42 @@
 ---
 name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
+about: Report a reproducible bug or unexpected behaviour in EasyPyDesktop
+title: '[BUG] '
+labels: bug
 assignees: ''
-
 ---
 
-**Describe the bug**
+**EasyPyDesktop Version:**
+<!-- e.g. 3.19 — find it in Help → About -->
+
+**Operating System:**
+<!-- e.g. Windows 10, Windows 11 -->
+
+**Describe the bug:**
 A clear and concise description of what the bug is.
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+**Steps to reproduce:**
+1. 
+2. 
+3. 
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+**Expected behaviour:**
+What should have happened.
 
-**Screenshots**
+**Actual behaviour:**
+What actually happened. Include any error message shown on screen.
+
+**Error message or traceback (if any):**
+```
+paste here
+```
+
+**Screenshots:**
 If applicable, add screenshots to help explain your problem.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+**Minimal project file (.json):**
+Attach a minimal .json project file that reproduces the issue — the smallest project that still shows the bug. This is the most helpful thing you can provide.
 
-**Additional context**
-Add any other context about the problem here.
+---
+> ⚠️ Feature requests and questions belong in [Discussions](../../discussions), not Issues.
+> Issues without version number and reproduction steps may be closed without response.
