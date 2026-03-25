@@ -62,6 +62,7 @@ Please note that **no direct technical support is provided**.
 * 🐛 **Bug Reports:** If you encounter reproducible bugs, crashes, or glitches, please open an **[Issue](https://github.com/emo44/easypy-desktop/issues)**. 
 
 Community feedback helps shape future versions, but please ensure you use the correct channel!
+> ⚠️ The software is provided "as-is". Development, updates, and availability may change or be discontinued at any time.
 
 ---
 
