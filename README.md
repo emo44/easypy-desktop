@@ -36,7 +36,7 @@ Create desktop apps quickly without fighting complex Qt tooling,
 - Full editor and visual designer
 - Create, save, and run projects
 - No time limits
-- Intended for development and testing
+- Intended for prototyping and testing
 
 Get it here:
 https://emosoft.gumroad.com/l/easypydesktop
