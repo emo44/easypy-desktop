@@ -9,6 +9,7 @@
 EasyPy Desktop was initially released as an **Early Access** product.
 
  - Development and availability may be discontinued at any time without obligation.
+ 
 **This project is no longer actively maintained and is now considered closed.** 
 ---
 
