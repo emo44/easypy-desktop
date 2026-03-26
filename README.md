@@ -41,7 +41,6 @@ Create desktop tools and prototype apps quickly:
 
 This GitHub repository is used to:
 - Publish release notes and changelogs
-- Track issues and bugs
 - Collect feedback from the community
 
 > **Note:** This repository does not contain the application source code.
