@@ -38,9 +38,6 @@ Create desktop apps quickly without fighting complex Qt tooling,
 - No time limits
 - Intended for prototyping and testing
 
-Get it here:
-https://emosoft.gumroad.com/l/easypydesktop
-
 ---
 
 ## 📌 About This Repository
