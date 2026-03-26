@@ -1,5 +1,4 @@
 # EasyPy Desktop 🖥️🐍
-**Visual Design meets the power of clean Python architecture**
 
 > EasyPy Desktop is a visual development environment for building Windows desktop applications with Python.
 
